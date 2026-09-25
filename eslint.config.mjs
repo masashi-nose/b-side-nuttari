@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Claude Design の書き出し（実装対象ではない）
+    "design/**",
   ]),
 ]);
 

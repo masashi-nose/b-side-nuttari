@@ -1,0 +1,416 @@
+[
+  {
+    "name": "OKASHI LAB.",
+    "category": "terrace",
+    "genres": ["sweets"],
+    "genreLabel": "駄菓子・お菓子",
+    "status": "open",
+    "summary": "",
+    "note": ""
+  },
+  {
+    "name": "Ploot",
+    "category": "terrace",
+    "genres": ["goods"],
+    "genreLabel": "観葉植物・建築設計",
+    "status": "open",
+    "summary": "",
+    "note": ""
+  },
+  {
+    "name": "taruhi glass works",
+    "category": "terrace",
+    "genres": ["craft"],
+    "genreLabel": "ガラス工房",
+    "status": "open",
+    "summary": "",
+    "note": ""
+  },
+  {
+    "name": "編むと紡ぐ",
+    "category": "terrace",
+    "genres": ["cafe"],
+    "genreLabel": "カフェ",
+    "status": "open",
+    "summary": "",
+    "note": ""
+  },
+  {
+    "name": "爪塗装noa",
+    "category": "terrace",
+    "genres": ["service"],
+    "genreLabel": "ネイルサロン",
+    "status": "open",
+    "summary": "",
+    "note": ""
+  },
+  {
+    "name": "VOST COFFEE",
+    "category": "terrace",
+    "genres": ["cafe"],
+    "genreLabel": "カフェ",
+    "status": "open",
+    "summary": "",
+    "note": ""
+  },
+  {
+    "name": "大佐渡たむら",
+    "category": "terrace",
+    "genres": ["food"],
+    "genreLabel": "大衆割烹",
+    "status": "open",
+    "summary": "",
+    "note": ""
+  },
+  {
+    "name": "TANKON",
+    "category": "terrace",
+    "genres": ["goods"],
+    "genreLabel": "家具・食品・雑貨",
+    "status": "open",
+    "summary": "",
+    "note": ""
+  },
+  {
+    "name": "佐藤青果物店",
+    "category": "terrace",
+    "genres": ["food"],
+    "genreLabel": "青果",
+    "status": "open",
+    "summary": "",
+    "note": ""
+  },
+  {
+    "name": "rium – atelier & shop",
+    "category": "terrace",
+    "genres": ["goods"],
+    "genreLabel": "セレクトショップ",
+    "status": "open",
+    "summary": "",
+    "note": "2026年8月25日オープン"
+  },
+  {
+    "name": "テラスオフィス",
+    "category": "terrace",
+    "genres": ["goods"],
+    "genreLabel": "管理オフィス・雑貨",
+    "status": "open",
+    "summary": "",
+    "note": "運営会社"
+  },
+  {
+    "name": "青人窯",
+    "category": "terrace",
+    "genres": ["craft"],
+    "genreLabel": "陶芸工房・体験",
+    "status": "open",
+    "summary": "",
+    "note": ""
+  },
+  {
+    "name": "eternal flower",
+    "category": "terrace",
+    "genres": ["goods"],
+    "genreLabel": "花",
+    "status": "open",
+    "summary": "",
+    "note": ""
+  },
+  {
+    "name": "K.M.ヴィンテージ",
+    "category": "terrace",
+    "genres": ["goods"],
+    "genreLabel": "ヴィンテージレコード",
+    "status": "open",
+    "summary": "ヴィンテージレコードの店。",
+    "note": ""
+  },
+  {
+    "name": "nemon",
+    "category": "terrace",
+    "genres": ["goods"],
+    "genreLabel": "アクセサリー・ファッション",
+    "status": "open",
+    "summary": "",
+    "note": ""
+  },
+  {
+    "name": "アトリエNOVI",
+    "category": "terrace",
+    "genres": ["craft"],
+    "genreLabel": "アトリエ",
+    "status": "open",
+    "summary": "",
+    "note": ""
+  },
+  {
+    "name": "SUNNY personal style",
+    "category": "terrace",
+    "genres": ["service"],
+    "genreLabel": "顔タイプ・骨格診断",
+    "status": "open",
+    "summary": "",
+    "note": ""
+  },
+  {
+    "name": "居酒屋め",
+    "category": "terrace",
+    "genres": ["food"],
+    "genreLabel": "居酒屋",
+    "status": "open",
+    "summary": "",
+    "note": ""
+  },
+  {
+    "name": "mountain△grocery",
+    "category": "terrace",
+    "genres": ["cafe"],
+    "genreLabel": "カフェ",
+    "status": "open",
+    "summary": "",
+    "note": ""
+  },
+  {
+    "name": "work place シロツメ舎",
+    "category": "terrace",
+    "genres": ["goods"],
+    "genreLabel": "糸とビーズのアクセサリー",
+    "status": "open",
+    "summary": "",
+    "note": ""
+  },
+  {
+    "name": "ニカイGallery",
+    "category": "terrace",
+    "genres": ["craft"],
+    "genreLabel": "ギャラリー",
+    "status": "open",
+    "summary": "",
+    "note": ""
+  },
+  {
+    "name": "ひとつぼし雑貨店",
+    "category": "terrace",
+    "genres": ["goods"],
+    "genreLabel": "雑貨・クラフトビール",
+    "status": "open",
+    "summary": "",
+    "note": ""
+  },
+  {
+    "name": "Rod Sagan",
+    "category": "terrace",
+    "genres": ["goods"],
+    "genreLabel": "ファッション・雑貨",
+    "status": "open",
+    "summary": "",
+    "note": ""
+  },
+  {
+    "name": "しごと場 灯台",
+    "category": "terrace",
+    "genres": ["service"],
+    "genreLabel": "コワーキングスペース",
+    "status": "open",
+    "summary": "",
+    "note": ""
+  },
+  {
+    "name": "spice curry podoco",
+    "category": "terrace",
+    "genres": ["food"],
+    "genreLabel": "カレー",
+    "status": "open",
+    "summary": "",
+    "note": ""
+  },
+  {
+    "name": "松本商店",
+    "category": "terrace",
+    "genres": ["goods"],
+    "genreLabel": "昭和レトロ雑貨",
+    "status": "open",
+    "summary": "昭和レトロの雑貨がそろう店。",
+    "note": ""
+  },
+  {
+    "name": "Oldtown Dessert Company",
+    "category": "terrace",
+    "genres": ["sweets"],
+    "genreLabel": "菓子工房",
+    "status": "open",
+    "summary": "",
+    "note": ""
+  },
+  {
+    "name": "ヒガナ",
+    "category": "terrace",
+    "genres": ["sweets"],
+    "genreLabel": "焼菓子",
+    "status": "open",
+    "summary": "",
+    "note": ""
+  },
+  {
+    "name": "なり -nuttari NARI-",
+    "category": "terrace",
+    "genres": ["stay"],
+    "genreLabel": "ゲストハウス",
+    "status": "open",
+    "summary": "",
+    "note": ""
+  },
+  {
+    "name": "KADO shoe repair & crafts",
+    "category": "terrace",
+    "genres": ["service"],
+    "genreLabel": "靴修理・クラフト",
+    "status": "open",
+    "summary": "",
+    "note": ""
+  },
+  {
+    "name": "占い。テラス",
+    "category": "terrace",
+    "genres": ["service"],
+    "genreLabel": "占い",
+    "status": "open",
+    "summary": "",
+    "note": ""
+  },
+  {
+    "name": "歩み",
+    "category": "terrace",
+    "genres": ["service"],
+    "genreLabel": "シャンプー屋",
+    "status": "open",
+    "summary": "",
+    "note": ""
+  },
+  {
+    "name": "atelier gallery mo",
+    "category": "terrace",
+    "genres": ["craft"],
+    "genreLabel": "アトリエ・ギャラリー",
+    "status": "open",
+    "summary": "",
+    "note": ""
+  },
+  {
+    "name": "今代司酒造",
+    "category": "kura",
+    "genres": ["ferment"],
+    "genreLabel": "酒蔵",
+    "status": "open",
+    "summary": "新潟駅からいちばん近い酒蔵。蔵見学と直売所がある。",
+    "note": "蔵見学・直売あり"
+  },
+  {
+    "name": "峰村醸造",
+    "category": "kura",
+    "genres": ["ferment"],
+    "genreLabel": "味噌蔵",
+    "status": "open",
+    "summary": "明治38年創業の味噌蔵。見学と直売所がある。",
+    "note": "1905年創業。見学・直売あり"
+  },
+  {
+    "name": "古町糀製造所 蔵座敷店",
+    "category": "kura",
+    "genres": ["ferment"],
+    "genreLabel": "糀",
+    "status": "open",
+    "summary": "",
+    "note": ""
+  },
+  {
+    "name": "沼垂白山神社",
+    "category": "spot",
+    "genres": ["shrine"],
+    "genreLabel": "神社",
+    "status": "open",
+    "summary": "沼垂の総鎮守。",
+    "note": "沼垂の総鎮守"
+  },
+  {
+    "name": "蒲原神社",
+    "category": "spot",
+    "genres": ["shrine"],
+    "genreLabel": "神社",
+    "status": "open",
+    "summary": "",
+    "note": "蒲原まつり（6月30日〜7月2日）"
+  },
+  {
+    "name": "乙子神社",
+    "category": "spot",
+    "genres": ["shrine"],
+    "genreLabel": "神社",
+    "status": "open",
+    "summary": "",
+    "note": "白山神社の裏手"
+  },
+  {
+    "name": "法光院",
+    "category": "spot",
+    "genres": ["shrine"],
+    "genreLabel": "寺院",
+    "status": "open",
+    "summary": "",
+    "note": "806年開山と伝わる"
+  },
+  {
+    "name": "真善寺",
+    "category": "spot",
+    "genres": ["shrine"],
+    "genreLabel": "寺院",
+    "status": "open",
+    "summary": "",
+    "note": ""
+  },
+  {
+    "name": "龍雲寺",
+    "category": "spot",
+    "genres": ["shrine"],
+    "genreLabel": "寺院",
+    "status": "open",
+    "summary": "",
+    "note": ""
+  },
+  {
+    "name": "悉地院",
+    "category": "spot",
+    "genres": ["shrine"],
+    "genreLabel": "寺院",
+    "status": "open",
+    "summary": "",
+    "note": ""
+  },
+  {
+    "name": "光照寺",
+    "category": "spot",
+    "genres": ["shrine"],
+    "genreLabel": "寺院",
+    "status": "open",
+    "summary": "",
+    "note": ""
+  },
+  {
+    "name": "小唄勝太郎の碑",
+    "category": "spot",
+    "genres": ["shrine"],
+    "genreLabel": "記念碑",
+    "status": "open",
+    "summary": "",
+    "note": ""
+  },
+  {
+    "name": "沼垂ビアパブ",
+    "category": "local",
+    "genres": ["food"],
+    "genreLabel": "ビアパブ",
+    "status": "open",
+    "summary": "",
+    "note": "フェーズ2候補"
+  }
+]

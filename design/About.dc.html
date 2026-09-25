@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&amp;family=Zen+Kaku+Gothic+New:wght@400;500;700&amp;family=DM+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#D9D2C2;font-family:"Zen Kaku Gothic New",sans-serif;color:#1B1B1B}
+a{color:#1B1B1B}a:hover{color:#22388F}
+button,input,textarea{font-family:inherit;color:#1B1B1B}
+input::placeholder,textarea::placeholder{color:#7A7366}
+:focus-visible{outline:3px solid #22388F;outline-offset:2px}
+</style>
+</helmet>
+<div style="display: flex; gap: 80px; align-items: flex-start; padding: 64px; width: max-content">
+
+<div style="display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; align-items: baseline; gap: 10px; font-family: 'DM Mono', monospace; font-size: 13px; letter-spacing: 0.08em"><span style="padding: 3px 8px; background: #1B1B1B; color: #F7F3EA">PC</span><span>/about/ — 1440px</span></div>
+<div data-screen-label="このサイトについて PC" style="width: 1440px; box-sizing: border-box; display: flex; flex-direction: column; background: #F7F3EA; color: #1B1B1B; font-family: 'Zen Kaku Gothic New', sans-serif">
+
+<header style="display: flex; align-items: center; justify-content: space-between; padding: 28px 80px">
+<a href="Top.dc.html" style="display: inline-flex; align-items: center; gap: 12px; text-decoration: none">
+<span style="width: 44px; height: 44px; border-radius: 50%; background: #22388F; color: #F7F3EA; display: flex; align-items: center; justify-content: center; font-family: 'Dela Gothic One', sans-serif; font-size: 20px">B</span>
+<span style="font-family: 'Dela Gothic One', sans-serif; font-size: 24px">B SIDE NUTTARI</span>
+</a>
+<nav aria-label="メイン" style="display: flex; gap: 12px; font-size: 15px; font-weight: 700">
+<a href="Spots%20List.dc.html" style="text-decoration: none; padding: 10px 20px; border: 2px solid #1B1B1B; border-radius: 999px" style-hover="background: #1B1B1B; color: #F7F3EA">お店・スポット</a>
+<a href="Articles%20List.dc.html" style="text-decoration: none; padding: 10px 20px; border: 2px solid #1B1B1B; border-radius: 999px" style-hover="background: #1B1B1B; color: #F7F3EA">読みもの</a>
+<a href="Access.dc.html" style="text-decoration: none; padding: 10px 20px; border: 2px solid #1B1B1B; border-radius: 999px" style-hover="background: #1B1B1B; color: #F7F3EA">アクセス</a>
+<a href="About.dc.html" aria-current="page" style="text-decoration: none; padding: 10px 20px; border: 2px solid #1B1B1B; border-radius: 999px; background: #1B1B1B; color: #F7F3EA">このサイトについて</a>
+</nav>
+</header>
+
+<nav aria-label="パンくず" style="padding: 8px 80px 32px; font-size: 14px; display: flex; gap: 10px">
+<a href="Top.dc.html">トップ</a><span>／</span><span>このサイトについて</span>
+</nav>
+
+<section style="padding: 0 80px 72px; display: flex; flex-direction: column; gap: 16px">
+<span style="font-family: 'DM Mono', monospace; font-size: 14px; letter-spacing: 0.14em">ABOUT</span>
+<h1 style="margin: 0; font-family: 'Dela Gothic One', sans-serif; font-size: 64px; line-height: 1.2; font-weight: 400">このサイトについて</h1>
+</section>
+
+<section style="padding: 0 80px 112px; display: flex; flex-direction: column; gap: 40px">
+<h2 style="margin: 0; font-family: 'Dela Gothic One', sans-serif; font-size: 36px; font-weight: 400">サイト名の由来</h2>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px">
+<div style="padding: 48px; background: #22388F; color: #F7F3EA; border: 3px solid #1B1B1B; border-radius: 24px; box-shadow: 8px 8px 0 #1B1B1B; display: flex; flex-direction: column; gap: 20px">
+<span style="font-family: 'DM Mono', monospace; font-size: 13px; letter-spacing: 0.14em">B SIDE</span>
+<div style="font-family: 'Dela Gothic One', sans-serif; font-size: 56px; line-height: 1.1">B SIDE</div>
+<div style="font-family: 'Dela Gothic One', sans-serif; font-size: 26px; line-height: 1.5">もうひとつの沼垂。</div>
+<p style="margin: 0; font-size: 17px; line-height: 1.9">公式（A面）とは別の、もうひとつの沼垂。商店街の公式サイトとは役割を分けて、沼垂エリア全体を紹介します。</p>
+</div>
+<div style="padding: 48px; background: #D9782D; color: #1B1B1B; border: 3px solid #1B1B1B; border-radius: 24px; box-shadow: 8px 8px 0 #1B1B1B; display: flex; flex-direction: column; gap: 20px">
+<span style="font-family: 'DM Mono', monospace; font-size: 13px; letter-spacing: 0.14em">BESIDE</span>
+<div style="font-family: 'Dela Gothic One', sans-serif; font-size: 56px; line-height: 1.1">BESIDE</div>
+<div style="font-family: 'Dela Gothic One', sans-serif; font-size: 26px; line-height: 1.5">沼垂の、すぐそばに。</div>
+<p style="margin: 0; font-size: 17px; line-height: 1.9">遠くに住んでいても、はじめて訪れる人でも、沼垂を身近に感じられる場所でありたい、という思いを込めました。</p>
+</div>
+</div>
+</section>
+
+<section style="padding: 0 80px 112px; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 48px">
+<div style="grid-column: span 8; display: flex; flex-direction: column; gap: 24px">
+<h2 style="margin: 0; font-family: 'Dela Gothic One', sans-serif; font-size: 36px; font-weight: 400">非公式のガイドです</h2>
+<p style="margin: 0; font-size: 17px; line-height: 2.1">このサイトは沼垂テラス商店街の公式サイトではありません。</p>
+<p style="margin: 0; font-size: 17px; line-height: 2.1">お店の営業時間や休みは変わることがあります。お出かけの前に、各お店の公式サイトやSNSもあわせて確認してください。</p>
+<a href="https://nuttari.jp" style="align-self: flex-start; display: inline-flex; align-items: center; height: 56px; padding: 0 32px; border: 2px solid #1B1B1B; border-radius: 999px; text-decoration: none; font-weight: 700" style-hover="background: #1B1B1B; color: #F7F3EA">沼垂テラス商店街 公式サイト ↗</a>
+</div>
+</section>
+
+<section id="pc-contact" style="margin: 0 80px 112px; padding: 72px; background: #22388F; color: #F7F3EA; border-radius: 32px; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 48px">
+<div style="grid-column: span 4; display: flex; flex-direction: column; gap: 20px">
+<span style="font-family: 'DM Mono', monospace; font-size: 13px; letter-spacing: 0.14em">CONTACT</span>
+<h2 style="margin: 0; font-family: 'Dela Gothic One', sans-serif; font-size: 44px; line-height: 1.3; font-weight: 400">お問い合わせ</h2>
+<p style="margin: 0; font-size: 16px; line-height: 1.9">サイトへのご意見、お店・スポットの掲載依頼、情報の訂正はこちらから。返信までにお時間をいただくことがあります。</p>
+</div>
+<div style="grid-column: span 8; padding: 40px; background: #F7F3EA; color: #1B1B1B; border: 3px solid #1B1B1B; border-radius: 24px; box-shadow: 8px 8px 0 #1B1B1B">
+<sc-if value="{{ pc.sent }}">
+<div role="status" style="display: flex; flex-direction: column; gap: 20px; padding: 24px 0">
+<span style="width: 72px; height: 72px; border-radius: 50%; background: #D9782D; border: 3px solid #1B1B1B; display: flex; align-items: center; justify-content: center; font-family: 'Dela Gothic One', sans-serif; font-size: 32px">✓</span>
+<div style="font-family: 'Dela Gothic One', sans-serif; font-size: 32px">送信しました</div>
+<p style="margin: 0; font-size: 16px; line-height: 1.9">お問い合わせありがとうございます。内容を確認して、[返信の目安を記入] ご連絡します。</p>
+<button type="button" onClick="{{ pc.reset }}" style="align-self: flex-start; height: 52px; padding: 0 28px; border: 2px solid #1B1B1B; border-radius: 999px; background: transparent; font-size: 15px; font-weight: 700; cursor: pointer">もう一度送る</button>
+</div>
+</sc-if>
+<sc-if value="{{ pc.editing }}" hint-placeholder-val="{{ true }}">
+<form onSubmit="{{ pc.submit }}" novalidate="" style="display: flex; flex-direction: column; gap: 28px">
+<fieldset style="margin: 0; padding: 0; border: none; display: flex; flex-direction: column; gap: 12px">
+<legend style="padding: 0; margin-bottom: 12px; font-size: 15px; font-weight: 700">種類 <span style="font-size: 12px; padding: 2px 8px; border-radius: 6px; background: #1B1B1B; color: #F7F3EA; margin-left: 6px">必須</span></legend>
+<div style="display: flex; gap: 10px">
+<sc-for list="{{ pc.types }}" as="t" hint-placeholder-count="3">
+<button type="button" role="radio" aria-checked="{{ t.active }}" onClick="{{ t.onClick }}" style="display: inline-flex; align-items: center; gap: 10px; height: 48px; padding: 0 20px; border: 2px solid #1B1B1B; border-radius: 999px; background: {{ t.bg }}; color: {{ t.fg }}; font-size: 15px; font-weight: 700; cursor: pointer"><span style="width: 16px; height: 16px; box-sizing: border-box; border-radius: 50%; border: 2px solid {{ t.fg }}; background: {{ t.dot }}"></span>{{ t.label }}</button>
+</sc-for>
+</div>
+</fieldset>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px">
+<label style="display: flex; flex-direction: column; gap: 8px; font-size: 15px; font-weight: 700">お名前
+<input type="text" value="{{ pc.name }}" onChange="{{ pc.onName }}" placeholder="沼垂 花子" style="height: 52px; padding: 0 16px; border: 2px solid #1B1B1B; border-radius: 12px; background: #FFFFFF; font-size: 16px; font-weight: 400"></label>
+<label style="display: flex; flex-direction: column; gap: 8px; font-size: 15px; font-weight: 700"><span>メールアドレス <span style="font-size: 12px; padding: 2px 8px; border-radius: 6px; background: #1B1B1B; color: #F7F3EA; margin-left: 6px">必須</span></span>
+<input type="email" value="{{ pc.email }}" onChange="{{ pc.onEmail }}" placeholder="you@example.com" aria-invalid="{{ pc.emailErr }}" style="height: 52px; padding: 0 16px; border: {{ pc.emailBorder }}; border-radius: 12px; background: #FFFFFF; font-size: 16px; font-weight: 400">
+<sc-if value="{{ pc.emailErr }}"><span style="display: flex; align-items: center; gap: 8px; font-size: 13px"><span style="width: 18px; height: 18px; border-radius: 50%; background: #D9782D; border: 2px solid #1B1B1B; box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center; font-size: 11px">!</span>{{ pc.emailMsg }}</span></sc-if>
+</label>
+</div>
+<sc-if value="{{ pc.needSpot }}">
+<label style="display: flex; flex-direction: column; gap: 8px; font-size: 15px; font-weight: 700">お店・スポットの名前
+<input type="text" value="{{ pc.spot }}" onChange="{{ pc.onSpot }}" placeholder="例：今代司酒造" style="height: 52px; padding: 0 16px; border: 2px solid #1B1B1B; border-radius: 12px; background: #FFFFFF; font-size: 16px; font-weight: 400"></label>
+</sc-if>
+<label style="display: flex; flex-direction: column; gap: 8px; font-size: 15px; font-weight: 700"><span>内容 <span style="font-size: 12px; padding: 2px 8px; border-radius: 6px; background: #1B1B1B; color: #F7F3EA; margin-left: 6px">必須</span></span>
+<textarea value="{{ pc.body }}" onChange="{{ pc.onBody }}" placeholder="{{ pc.bodyPh }}" aria-invalid="{{ pc.bodyErr }}" style="min-height: 180px; padding: 14px 16px; border: {{ pc.bodyBorder }}; border-radius: 12px; background: #FFFFFF; font-size: 16px; font-weight: 400; line-height: 1.8; resize: vertical"></textarea>
+<sc-if value="{{ pc.bodyErr }}"><span style="display: flex; align-items: center; gap: 8px; font-size: 13px"><span style="width: 18px; height: 18px; border-radius: 50%; background: #D9782D; border: 2px solid #1B1B1B; box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center; font-size: 11px">!</span>内容を入力してください</span></sc-if>
+</label>
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-top: 8px; border-top: 2px dashed #1B1B1B">
+<label style="display: flex; align-items: center; gap: 12px; min-height: 44px; font-size: 15px; cursor: pointer">
+<input type="checkbox" checked="{{ pc.agree }}" onChange="{{ pc.onAgree }}" style="width: 22px; height: 22px; accent-color: #22388F; margin: 0">
+<span><a href="#">プライバシーポリシー</a> に同意する</span>
+</label>
+<button type="submit" disabled="{{ pc.cantSend }}" style="height: 56px; padding: 0 40px; border: none; border-radius: 999px; background: #22388F; color: #F7F3EA; font-size: 16px; font-weight: 700; cursor: pointer; opacity: {{ pc.sendOp }}">送信する</button>
+</div>
+</form>
+</sc-if>
+</div>
+</section>
+
+<footer style="background: #1B1B1B; color: #F7F3EA; padding: 72px 80px; display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; justify-content: space-between; align-items: flex-start">
+<div style="font-family: 'Dela Gothic One', sans-serif; font-size: 36px">B SIDE NUTTARI</div>
+<nav aria-label="フッター" style="display: flex; gap: 32px; font-size: 15px; font-weight: 700">
+<a href="Spots%20List.dc.html" style="color: #F7F3EA; text-decoration: none">お店・スポット</a>
+<a href="Articles%20List.dc.html" style="color: #F7F3EA; text-decoration: none">読みもの</a>
+<a href="Access.dc.html" style="color: #F7F3EA; text-decoration: none">アクセス</a>
+<a href="About.dc.html" style="color: #F7F3EA; text-decoration: none">このサイトについて</a>
+</nav>
+</div>
+<p style="margin: 0; font-size: 14px; line-height: 1.8; color: #CFC9BC">このサイトは沼垂テラス商店街の公式サイトではありません。</p>
+</footer>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; align-items: baseline; gap: 10px; font-family: 'DM Mono', monospace; font-size: 13px; letter-spacing: 0.08em"><span style="padding: 3px 8px; background: #1B1B1B; color: #F7F3EA">SP</span><span>/about/ — 390px</span></div>
+<div data-screen-label="このサイトについて SP" style="width: 390px; box-sizing: border-box; display: flex; flex-direction: column; background: #F7F3EA; color: #1B1B1B; font-family: 'Zen Kaku Gothic New', sans-serif">
+
+<header style="display: flex; align-items: center; justify-content: space-between; padding: 16px 20px">
+<a href="Top.dc.html" style="display: inline-flex; align-items: center; gap: 10px; text-decoration: none">
+<span style="width: 36px; height: 36px; border-radius: 50%; background: #22388F; color: #F7F3EA; display: flex; align-items: center; justify-content: center; font-family: 'Dela Gothic One', sans-serif; font-size: 16px">B</span>
+<span style="font-family: 'Dela Gothic One', sans-serif; font-size: 18px">B SIDE NUTTARI</span>
+</a>
+<a href="SP%20Menu.dc.html" aria-label="メニューを開く" style="width: 48px; height: 48px; box-sizing: border-box; border: 2px solid #1B1B1B; border-radius: 50%; background: #F7F3EA; display: flex; align-items: center; justify-content: center">
+<svg width="20" height="14" viewBox="0 0 20 14" fill="none" stroke="#1B1B1B" stroke-width="2.4" stroke-linecap="round"><line x1="1" y1="2" x2="19" y2="2"></line><line x1="1" y1="12" x2="19" y2="12"></line></svg>
+</a>
+</header>
+
+<nav aria-label="パンくず" style="padding: 4px 20px 20px; font-size: 13px; display: flex; gap: 8px">
+<a href="Top.dc.html">トップ</a><span>／</span><span>このサイトについて</span>
+</nav>
+
+<section style="padding: 0 20px 40px; display: flex; flex-direction: column; gap: 12px">
+<span style="font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.14em">ABOUT</span>
+<h1 style="margin: 0; font-family: 'Dela Gothic One', sans-serif; font-size: 32px; line-height: 1.3; font-weight: 400">このサイトについて</h1>
+</section>
+
+<section style="padding: 0 16px 64px; display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0 4px 4px; font-family: 'Dela Gothic One', sans-serif; font-size: 22px; font-weight: 400">サイト名の由来</h2>
+<div style="padding: 24px 20px; background: #22388F; color: #F7F3EA; border: 3px solid #1B1B1B; border-radius: 20px; box-shadow: 5px 5px 0 #1B1B1B; display: flex; flex-direction: column; gap: 12px">
+<div style="font-family: 'Dela Gothic One', sans-serif; font-size: 36px; line-height: 1.1">B SIDE</div>
+<div style="font-family: 'Dela Gothic One', sans-serif; font-size: 19px">もうひとつの沼垂。</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.9">公式（A面）とは別の、もうひとつの沼垂。商店街の公式サイトとは役割を分けて、沼垂エリア全体を紹介します。</p>
+</div>
+<div style="padding: 24px 20px; background: #D9782D; color: #1B1B1B; border: 3px solid #1B1B1B; border-radius: 20px; box-shadow: 5px 5px 0 #1B1B1B; display: flex; flex-direction: column; gap: 12px">
+<div style="font-family: 'Dela Gothic One', sans-serif; font-size: 36px; line-height: 1.1">BESIDE</div>
+<div style="font-family: 'Dela Gothic One', sans-serif; font-size: 19px">沼垂の、すぐそばに。</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.9">遠くに住んでいても、はじめて訪れる人でも、沼垂を身近に感じられる場所でありたい、という思いを込めました。</p>
+</div>
+</section>
+
+<section style="padding: 0 20px 40px; display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-family: 'Dela Gothic One', sans-serif; font-size: 22px; font-weight: 400">非公式のガイドです</h2>
+<p style="margin: 0; font-size: 15px; line-height: 2">このサイトは沼垂テラス商店街の公式サイトではありません。</p>
+<p style="margin: 0; font-size: 15px; line-height: 2">お店の営業時間や休みは変わることがあります。お出かけの前に、各お店の公式サイトやSNSもあわせて確認してください。</p>
+<a href="https://nuttari.jp" style="display: flex; align-items: center; justify-content: center; height: 52px; border: 2px solid #1B1B1B; border-radius: 999px; text-decoration: none; font-weight: 700">沼垂テラス商店街 公式サイト ↗</a>
+</section>
+
+
+<section style="margin: 0 16px 64px; padding: 28px 16px 16px; background: #22388F; color: #F7F3EA; border-radius: 24px; display: flex; flex-direction: column; gap: 16px">
+<div style="padding: 0 4px; display: flex; flex-direction: column; gap: 10px">
+<span style="font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.14em">CONTACT</span>
+<h2 style="margin: 0; font-family: 'Dela Gothic One', sans-serif; font-size: 24px; font-weight: 400">お問い合わせ</h2>
+<p style="margin: 0; font-size: 14px; line-height: 1.8">サイトへのご意見、掲載依頼、情報の訂正はこちらから。</p>
+</div>
+<div style="padding: 20px 16px; background: #F7F3EA; color: #1B1B1B; border: 3px solid #1B1B1B; border-radius: 18px">
+<sc-if value="{{ sp.sent }}">
+<div role="status" style="display: flex; flex-direction: column; gap: 14px">
+<span style="width: 56px; height: 56px; border-radius: 50%; background: #D9782D; border: 3px solid #1B1B1B; display: flex; align-items: center; justify-content: center; font-family: 'Dela Gothic One', sans-serif; font-size: 24px">✓</span>
+<div style="font-family: 'Dela Gothic One', sans-serif; font-size: 22px">送信しました</div>
+<p style="margin: 0; font-size: 14px; line-height: 1.8">お問い合わせありがとうございます。内容を確認して、[返信の目安を記入] ご連絡します。</p>
+<button type="button" onClick="{{ sp.reset }}" style="height: 52px; border: 2px solid #1B1B1B; border-radius: 999px; background: transparent; font-size: 15px; font-weight: 700; cursor: pointer">もう一度送る</button>
+</div>
+</sc-if>
+<sc-if value="{{ sp.editing }}" hint-placeholder-val="{{ true }}">
+<form onSubmit="{{ sp.submit }}" novalidate="" style="display: flex; flex-direction: column; gap: 20px">
+<fieldset style="margin: 0; padding: 0; border: none; display: flex; flex-direction: column; gap: 8px">
+<legend style="padding: 0; margin-bottom: 8px; font-size: 14px; font-weight: 700">種類 <span style="font-size: 11px; padding: 2px 6px; border-radius: 5px; background: #1B1B1B; color: #F7F3EA; margin-left: 4px">必須</span></legend>
+<sc-for list="{{ sp.types }}" as="t" hint-placeholder-count="3">
+<button type="button" role="radio" aria-checked="{{ t.active }}" onClick="{{ t.onClick }}" style="display: flex; align-items: center; gap: 10px; height: 48px; padding: 0 16px; border: 2px solid #1B1B1B; border-radius: 999px; background: {{ t.bg }}; color: {{ t.fg }}; font-size: 15px; font-weight: 700; cursor: pointer"><span style="width: 16px; height: 16px; box-sizing: border-box; border-radius: 50%; border: 2px solid {{ t.fg }}; background: {{ t.dot }}"></span>{{ t.label }}</button>
+</sc-for>
+</fieldset>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 700">お名前
+<input type="text" value="{{ sp.name }}" onChange="{{ sp.onName }}" placeholder="沼垂 花子" style="height: 52px; padding: 0 14px; border: 2px solid #1B1B1B; border-radius: 12px; background: #FFFFFF; font-size: 16px; font-weight: 400"></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 700"><span>メールアドレス <span style="font-size: 11px; padding: 2px 6px; border-radius: 5px; background: #1B1B1B; color: #F7F3EA; margin-left: 4px">必須</span></span>
+<input type="email" value="{{ sp.email }}" onChange="{{ sp.onEmail }}" placeholder="you@example.com" aria-invalid="{{ sp.emailErr }}" style="height: 52px; padding: 0 14px; border: {{ sp.emailBorder }}; border-radius: 12px; background: #FFFFFF; font-size: 16px; font-weight: 400">
+<sc-if value="{{ sp.emailErr }}"><span style="display: flex; align-items: center; gap: 8px; font-size: 13px"><span style="width: 18px; height: 18px; border-radius: 50%; background: #D9782D; border: 2px solid #1B1B1B; box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center; font-size: 11px">!</span>{{ sp.emailMsg }}</span></sc-if>
+</label>
+<sc-if value="{{ sp.needSpot }}">
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 700">お店・スポットの名前
+<input type="text" value="{{ sp.spot }}" onChange="{{ sp.onSpot }}" placeholder="例：今代司酒造" style="height: 52px; padding: 0 14px; border: 2px solid #1B1B1B; border-radius: 12px; background: #FFFFFF; font-size: 16px; font-weight: 400"></label>
+</sc-if>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 700"><span>内容 <span style="font-size: 11px; padding: 2px 6px; border-radius: 5px; background: #1B1B1B; color: #F7F3EA; margin-left: 4px">必須</span></span>
+<textarea value="{{ sp.body }}" onChange="{{ sp.onBody }}" placeholder="{{ sp.bodyPh }}" aria-invalid="{{ sp.bodyErr }}" style="min-height: 160px; padding: 12px 14px; border: {{ sp.bodyBorder }}; border-radius: 12px; background: #FFFFFF; font-size: 16px; font-weight: 400; line-height: 1.8; resize: vertical"></textarea>
+<sc-if value="{{ sp.bodyErr }}"><span style="display: flex; align-items: center; gap: 8px; font-size: 13px"><span style="width: 18px; height: 18px; border-radius: 50%; background: #D9782D; border: 2px solid #1B1B1B; box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center; font-size: 11px">!</span>内容を入力してください</span></sc-if>
+</label>
+<label style="display: flex; align-items: center; gap: 12px; min-height: 44px; font-size: 14px; cursor: pointer">
+<input type="checkbox" checked="{{ sp.agree }}" onChange="{{ sp.onAgree }}" style="width: 22px; height: 22px; accent-color: #22388F; margin: 0">
+<span><a href="#">プライバシーポリシー</a> に同意する</span>
+</label>
+<button type="submit" disabled="{{ sp.cantSend }}" style="height: 56px; border: none; border-radius: 999px; background: #22388F; color: #F7F3EA; font-size: 16px; font-weight: 700; cursor: pointer; opacity: {{ sp.sendOp }}">送信する</button>
+</form>
+</sc-if>
+</div>
+</section>
+
+<footer style="background: #1B1B1B; color: #F7F3EA; padding: 40px 20px; display: flex; flex-direction: column; gap: 24px">
+<div style="font-family: 'Dela Gothic One', sans-serif; font-size: 26px">B SIDE NUTTARI</div>
+<nav aria-label="フッター" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px 16px; font-size: 15px; font-weight: 700">
+<a href="Spots%20List.dc.html" style="color: #F7F3EA; text-decoration: none; padding: 12px 0">お店・スポット</a>
+<a href="Articles%20List.dc.html" style="color: #F7F3EA; text-decoration: none; padding: 12px 0">読みもの</a>
+<a href="Access.dc.html" style="color: #F7F3EA; text-decoration: none; padding: 12px 0">アクセス</a>
+<a href="About.dc.html" style="color: #F7F3EA; text-decoration: none; padding: 12px 0">このサイトについて</a>
+</nav>
+<p style="margin: 0; font-size: 12px; line-height: 1.8; color: #CFC9BC">このサイトは沼垂テラス商店街の公式サイトではありません。</p>
+</footer>
+</div>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const TYPES = ['お問い合わせ', '掲載依頼', '情報の訂正'];
+const PH = {
+  'お問い合わせ': 'サイトへのご意見・ご質問をお書きください',
+  '掲載依頼': 'お店・スポットの場所、紹介してほしいことなどをお書きください',
+  '情報の訂正': 'どのページの、どの情報が変わっているかをお書きください'
+};
+const blank = () => ({ type: 'お問い合わせ', name: '', email: '', spot: '', body: '', agree: false, tried: false, sent: false });
+class Component extends DCLogic {
+  state = { pc: blank(), sp: blank() };
+  upd(k, p) { this.setState((s) => ({ [k]: { ...s[k], ...p } })); }
+  form(k) {
+    const f = this.state[k];
+    const emailBad = !/^\S+@\S+\.\S+$/.test(f.email);
+    const emailErr = f.tried && emailBad;
+    const bodyErr = f.tried && !f.body.trim();
+    const bad = '3px solid #D9782D';
+    return {
+      sent: f.sent, editing: !f.sent,
+      types: TYPES.map((t) => ({ label: t, active: f.type === t, bg: f.type === t ? '#1B1B1B' : '#FFFFFF', fg: f.type === t ? '#F7F3EA' : '#1B1B1B',
+        dot: f.type === t ? '#D9782D' : 'transparent', onClick: () => this.upd(k, { type: t }) })),
+      needSpot: f.type !== 'お問い合わせ', bodyPh: PH[f.type],
+      name: f.name, email: f.email, spot: f.spot, body: f.body, agree: f.agree,
+      onName: (e) => this.upd(k, { name: e.target.value }),
+      onEmail: (e) => this.upd(k, { email: e.target.value }),
+      onSpot: (e) => this.upd(k, { spot: e.target.value }),
+      onBody: (e) => this.upd(k, { body: e.target.value }),
+      onAgree: (e) => this.upd(k, { agree: e.target.checked }),
+      emailErr, emailMsg: f.email ? 'メールアドレスの形を確認してください' : 'メールアドレスを入力してください',
+      emailBorder: emailErr ? bad : '2px solid #1B1B1B', bodyErr, bodyBorder: bodyErr ? bad : '2px solid #1B1B1B',
+      cantSend: !f.agree, sendOp: f.agree ? 1 : 0.45,
+      submit: (e) => { e.preventDefault(); if (emailBad || !f.body.trim()) return this.upd(k, { tried: true }); this.upd(k, { sent: true }); },
+      reset: () => this.setState({ [k]: blank() })
+    };
+  }
+  renderVals() { return { pc: this.form('pc'), sp: this.form('sp') }; }
+}
+</script>
+</body>
+</html>

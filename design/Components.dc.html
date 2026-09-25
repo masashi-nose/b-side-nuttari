@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&amp;family=Zen+Kaku+Gothic+New:wght@400;500;700&amp;family=DM+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#D9D2C2;font-family:"Zen Kaku Gothic New",sans-serif;color:#1B1B1B}
+a{color:#1B1B1B}a:hover{color:#22388F}
+button,input,textarea{font-family:inherit;color:#1B1B1B}
+input::placeholder,textarea::placeholder{color:#7A7366}
+:focus-visible{outline:3px solid #22388F;outline-offset:2px}
+</style>
+</helmet>
+<div style="padding: 64px; width: max-content">
+<div data-screen-label="コンポーネント一覧" style="width: 1440px; box-sizing: border-box; padding: 80px; display: flex; flex-direction: column; gap: 96px; background: #F7F3EA; color: #1B1B1B; font-family: 'Zen Kaku Gothic New', sans-serif">
+
+<div style="display: flex; justify-content: space-between; align-items: flex-end; padding-bottom: 32px; border-bottom: 3px solid #1B1B1B">
+<div style="display: flex; flex-direction: column; gap: 12px">
+<span style="font-family: 'DM Mono', monospace; font-size: 14px; letter-spacing: 0.14em">DESIGN SYSTEM</span>
+<h1 style="margin: 0; font-family: 'Dela Gothic One', sans-serif; font-size: 64px; line-height: 1.2; font-weight: 400">コンポーネント一覧</h1>
+</div>
+<div style="display: inline-flex; align-items: center; gap: 12px"><span style="width: 44px; height: 44px; border-radius: 50%; background: #22388F; color: #F7F3EA; display: flex; align-items: center; justify-content: center; font-family: 'Dela Gothic One', sans-serif; font-size: 20px">B</span><span style="font-family: 'Dela Gothic One', sans-serif; font-size: 24px">B SIDE NUTTARI</span></div>
+</div>
+
+<section style="display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; align-items: baseline; gap: 16px"><span style="font-family: 'DM Mono', monospace; font-size: 13px; letter-spacing: 0.14em">01 — COLOR</span><h2 style="margin: 0; font-family: 'Dela Gothic One', sans-serif; font-size: 36px; font-weight: 400">配色</h2></div>
+<div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px">
+<div style="border: 3px solid #1B1B1B; border-radius: 16px; overflow: hidden; background: #FFFFFF"><div style="height: 160px; background: #22388F; color: #F7F3EA; padding: 20px; box-sizing: border-box; font-family: 'Dela Gothic One', sans-serif; font-size: 28px">藍</div><div style="padding: 16px 20px; display: flex; flex-direction: column; gap: 4px"><span style="font-weight: 700">蛇の目の藍・メイン</span><span style="font-family: 'DM Mono', monospace; font-size: 13px">#22388F</span><span style="font-size: 13px">上に生成り（9.3）</span></div></div>
+<div style="border: 3px solid #1B1B1B; border-radius: 16px; overflow: hidden; background: #FFFFFF"><div style="height: 160px; background: #D9782D; color: #1B1B1B; padding: 20px; box-sizing: border-box; font-family: 'Dela Gothic One', sans-serif; font-size: 28px">橙</div><div style="padding: 16px 20px; display: flex; flex-direction: column; gap: 4px"><span style="font-weight: 700">味噌の橙・差し色</span><span style="font-family: 'DM Mono', monospace; font-size: 13px">#D9782D</span><span style="font-size: 13px">大きい文字は墨（5.5）／小ラベルは白</span></div></div>
+<div style="border: 3px solid #1B1B1B; border-radius: 16px; overflow: hidden; background: #FFFFFF"><div style="height: 160px; background: #F7F3EA; color: #1B1B1B; padding: 20px; box-sizing: border-box; border-bottom: 3px solid #1B1B1B; font-family: 'Dela Gothic One', sans-serif; font-size: 28px">生成り</div><div style="padding: 16px 20px; display: flex; flex-direction: column; gap: 4px"><span style="font-weight: 700">背景</span><span style="font-family: 'DM Mono', monospace; font-size: 13px">#F7F3EA</span><span style="font-size: 13px">上に墨</span></div></div>
+<div style="border: 3px solid #1B1B1B; border-radius: 16px; overflow: hidden; background: #FFFFFF"><div style="height: 160px; background: #1B1B1B; color: #F7F3EA; padding: 20px; box-sizing: border-box; font-family: 'Dela Gothic One', sans-serif; font-size: 28px">墨</div><div style="padding: 16px 20px; display: flex; flex-direction: column; gap: 4px"><span style="font-weight: 700">文字・線</span><span style="font-family: 'DM Mono', monospace; font-size: 13px">#1B1B1B</span><span style="font-size: 13px">上に生成り</span></div></div>
+</div>
+<div style="display: flex; gap: 24px; font-size: 14px">
+<span style="display: inline-flex; align-items: center; gap: 10px"><span style="width: 28px; height: 28px; border-radius: 6px; background: #E9E2D2; border: 2px solid #1B1B1B"></span>写真の仮置き #E9E2D2</span>
+<span style="display: inline-flex; align-items: center; gap: 10px"><span style="width: 28px; height: 28px; border-radius: 6px; background: #D9D2C2; border: 2px solid #1B1B1B"></span>写真の仮置き #D9D2C2</span>
+<span style="display: inline-flex; align-items: center; gap: 10px"><span style="width: 28px; height: 28px; border-radius: 6px; background: #5A5448; border: 2px solid #1B1B1B"></span>仮置きの文字 #5A5448</span>
+<span style="display: inline-flex; align-items: center; gap: 10px"><span style="width: 28px; height: 28px; border-radius: 50%; background: #1F8A4C; border: 2px solid #1B1B1B"></span>営業中 #1F8A4C</span>
+</div>
+</section>
+
+<section style="display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; align-items: baseline; gap: 16px"><span style="font-family: 'DM Mono', monospace; font-size: 13px; letter-spacing: 0.14em">02 — TYPE</span><h2 style="margin: 0; font-family: 'Dela Gothic One', sans-serif; font-size: 36px; font-weight: 400">書体と見出し</h2></div>
+<div style="background: #FFFFFF; border: 3px solid #1B1B1B; border-radius: 20px; padding: 8px 40px">
+<div style="display: grid; grid-template-columns: 240px minmax(0, 1fr); gap: 32px; align-items: baseline; padding: 28px 0; border-bottom: 1px solid #D8D1C2"><span style="font-family: 'DM Mono', monospace; font-size: 13px; line-height: 1.7">キャッチ h1<br>Dela Gothic One 88 / SP 48</span><span style="font-family: 'Dela Gothic One', sans-serif; font-size: 88px; line-height: 1.2; color: #22388F">沼垂の、すぐそばに。</span></div>
+<div style="display: grid; grid-template-columns: 240px minmax(0, 1fr); gap: 32px; align-items: baseline; padding: 28px 0; border-bottom: 1px solid #D8D1C2"><span style="font-family: 'DM Mono', monospace; font-size: 13px; line-height: 1.7">店名・記事 h1<br>60–64 / SP 32–36</span><span style="font-family: 'Dela Gothic One', sans-serif; font-size: 64px; line-height: 1.2">今代司酒造</span></div>
+<div style="display: grid; grid-template-columns: 240px minmax(0, 1fr); gap: 32px; align-items: baseline; padding: 28px 0; border-bottom: 1px solid #D8D1C2"><span style="font-family: 'DM Mono', monospace; font-size: 13px; line-height: 1.7">セクション h2<br>48（下層 36）/ SP 28（22–24）</span><span style="font-family: 'Dela Gothic One', sans-serif; font-size: 48px">お店とスポット</span></div>
+<div style="display: grid; grid-template-columns: 240px minmax(0, 1fr); gap: 32px; align-items: center; padding: 28px 0; border-bottom: 1px solid #D8D1C2"><span style="font-family: 'DM Mono', monospace; font-size: 13px; line-height: 1.7">記事の見出し<br>32 / SP 22 ＋橙マーカー</span><span style="display: flex; align-items: center; gap: 14px; font-family: 'Dela Gothic One', sans-serif; font-size: 32px"><span style="width: 14px; height: 36px; background: #D9782D; border: 2px solid #1B1B1B; border-radius: 4px"></span>まずは今代司酒造へ</span></div>
+<div style="display: grid; grid-template-columns: 240px minmax(0, 1fr); gap: 32px; align-items: baseline; padding: 28px 0; border-bottom: 1px solid #D8D1C2"><span style="font-family: 'DM Mono', monospace; font-size: 13px; line-height: 1.7">本文<br>Zen Kaku Gothic New 17–19 / 1.9–2.1</span><span style="font-size: 18px; line-height: 2">沼垂のお店とスポットをひとつにまとめました。新しいけど、どこか懐かしい。発酵と醸造のまちを、もっと身近に。</span></div>
+<div style="display: grid; grid-template-columns: 240px minmax(0, 1fr); gap: 32px; align-items: baseline; padding: 28px 0"><span style="font-family: 'DM Mono', monospace; font-size: 13px; line-height: 1.7">英字の小見出し<br>DM Mono 12–15 / 字間 0.14em</span><span style="font-family: 'DM Mono', monospace; font-size: 15px; letter-spacing: 0.14em">FEATURE · GUIDE · HISTORY · SPOT</span></div>
+</div>
+<blockquote style="margin: 0; max-width: 720px; padding: 28px 32px; background: #22388F; color: #F7F3EA; border-radius: 16px; font-family: 'Dela Gothic One', sans-serif; font-size: 26px; line-height: 1.6">「[引用：取材で聞いた印象的なひとこと]」</blockquote>
+</section>
+
+<section style="display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; align-items: baseline; gap: 16px"><span style="font-family: 'DM Mono', monospace; font-size: 13px; letter-spacing: 0.14em">03 — BUTTONS</span><h2 style="margin: 0; font-family: 'Dela Gothic One', sans-serif; font-size: 36px; font-weight: 400">ボタン・ナビ</h2></div>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px">
+<div style="padding: 32px; background: #FFFFFF; border: 3px solid #1B1B1B; border-radius: 20px; display: flex; flex-direction: column; gap: 16px"><span style="font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.14em">PRIMARY 主</span><a href="#" style="align-self: flex-start; display: inline-flex; align-items: center; height: 56px; padding: 0 32px; background: #22388F; color: #F7F3EA; border-radius: 999px; text-decoration: none; font-weight: 700" style-hover="background: #1B1B1B; color: #F7F3EA">お店とスポットを見る</a><span style="font-size: 13px">藍地・生成り文字。ホバーで墨</span></div>
+<div style="padding: 32px; background: #FFFFFF; border: 3px solid #1B1B1B; border-radius: 20px; display: flex; flex-direction: column; gap: 16px"><span style="font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.14em">SECONDARY 副</span><a href="#" style="align-self: flex-start; display: inline-flex; align-items: center; height: 56px; padding: 0 32px; border: 2px solid #1B1B1B; border-radius: 999px; text-decoration: none; font-weight: 700" style-hover="background: #1B1B1B; color: #F7F3EA">アクセス</a><span style="font-size: 13px">墨2px枠。ホバーで墨地</span></div>
+<div style="padding: 32px; background: #D9782D; border: 3px solid #1B1B1B; border-radius: 20px; display: flex; flex-direction: column; gap: 16px"><span style="font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.14em">DARK 濃（橙の上）</span><a href="#" style="align-self: flex-start; display: inline-flex; align-items: center; height: 56px; padding: 0 32px; background: #1B1B1B; color: #F7F3EA; border-radius: 999px; text-decoration: none; font-weight: 700" style-hover="background: #22388F; color: #F7F3EA">行き方を見る</a><span style="font-size: 13px">墨地・生成り文字</span></div>
+</div>
+<div style="display: flex; gap: 48px; align-items: center; flex-wrap: wrap">
+<div style="display: flex; flex-direction: column; gap: 12px"><span style="font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.14em">NAV（現在地は墨）</span><nav style="display: flex; gap: 12px; font-size: 15px; font-weight: 700"><a href="#" style="text-decoration: none; padding: 10px 20px; border: 2px solid #1B1B1B; border-radius: 999px; background: #1B1B1B; color: #F7F3EA">お店・スポット</a><a href="#" style="text-decoration: none; padding: 10px 20px; border: 2px solid #1B1B1B; border-radius: 999px" style-hover="background: #1B1B1B; color: #F7F3EA">読みもの</a><a href="#" style="text-decoration: none; padding: 10px 20px; border: 2px solid #1B1B1B; border-radius: 999px" style-hover="background: #1B1B1B; color: #F7F3EA">アクセス</a></nav></div>
+<div style="display: flex; flex-direction: column; gap: 12px"><span style="font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.14em">ICON（56 / SP 48）</span><div style="display: flex; gap: 12px">
+<span style="width: 52px; height: 52px; border-radius: 50%; border: 2px solid #1B1B1B; background: #F7F3EA; display: flex; align-items: center; justify-content: center; font-size: 22px">←</span>
+<span style="width: 52px; height: 52px; border-radius: 50%; border: 2px solid #1B1B1B; background: #1B1B1B; color: #F7F3EA; display: flex; align-items: center; justify-content: center; font-size: 22px">→</span>
+<span style="width: 56px; height: 56px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid #1B1B1B; border-radius: 50%; background: #FFFFFF"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1B1B1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><ellipse cx="12" cy="12" rx="4" ry="9"></ellipse><line x1="3" y1="12" x2="21" y2="12"></line></svg></span>
+<span style="width: 56px; height: 56px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid #1B1B1B; border-radius: 50%; background: #FFFFFF"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1B1B1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3v11H4z"></path><circle cx="12" cy="13" r="3.5"></circle></svg></span>
+<span style="width: 48px; height: 48px; box-sizing: border-box; border: 2px solid #1B1B1B; border-radius: 50%; background: #F7F3EA; display: flex; align-items: center; justify-content: center"><svg width="20" height="14" viewBox="0 0 20 14" fill="none" stroke="#1B1B1B" stroke-width="2.4" stroke-linecap="round"><line x1="1" y1="2" x2="19" y2="2"></line><line x1="1" y1="12" x2="19" y2="12"></line></svg></span>
+</div></div>
+<div style="display: flex; flex-direction: column; gap: 12px"><span style="font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.14em">FILTER（選択中は墨）</span><div style="display: flex; gap: 10px">
+<span style="display: inline-flex; align-items: center; gap: 10px; height: 48px; padding: 0 20px; border: 2px solid #1B1B1B; border-radius: 999px; background: #1B1B1B; color: #F7F3EA; font-size: 15px; font-weight: 700">すべて <span style="font-family: 'DM Mono', monospace; font-size: 13px; font-weight: 500">46</span></span>
+<span style="display: inline-flex; align-items: center; gap: 10px; height: 48px; padding: 0 20px; border: 2px solid #1B1B1B; border-radius: 999px; font-size: 15px; font-weight: 700"><span style="width: 12px; height: 12px; border-radius: 50%; background: #D9782D; border: 2px solid #1B1B1B; box-sizing: border-box"></span>商店街 <span style="font-family: 'DM Mono', monospace; font-size: 13px; font-weight: 500">33</span></span>
+<span style="display: inline-flex; align-items: center; gap: 8px; height: 44px; padding: 0 16px; border: 2px solid #1B1B1B; border-radius: 999px; background: #22388F; color: #F7F3EA; font-size: 14px; font-weight: 700">✓ カフェ</span>
+</div></div>
+</div>
+</section>
+
+<section style="display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; align-items: baseline; gap: 16px"><span style="font-family: 'DM Mono', monospace; font-size: 13px; letter-spacing: 0.14em">04 — TAGS</span><h2 style="margin: 0; font-family: 'Dela Gothic One', sans-serif; font-size: 36px; font-weight: 400">タグ</h2></div>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px">
+<div style="padding: 28px; background: #FFFFFF; border: 3px solid #1B1B1B; border-radius: 20px; display: flex; flex-direction: column; gap: 16px"><span style="font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.14em">区分</span><div style="display: flex; gap: 8px; flex-wrap: wrap">
+<span style="font-size: 13px; font-weight: 700; padding: 3px 12px; border-radius: 6px; border: 2px solid #D9782D; background: #D9782D; color: #FFFFFF">商店街</span>
+<span style="font-size: 13px; font-weight: 700; padding: 3px 12px; border-radius: 6px; border: 2px solid #22388F; background: #22388F; color: #F7F3EA">蔵元</span>
+<span style="font-size: 13px; font-weight: 700; padding: 3px 12px; border-radius: 6px; border: 2px solid #1B1B1B; background: #1B1B1B; color: #F7F3EA">スポット</span>
+<span style="font-size: 13px; font-weight: 700; padding: 3px 12px; border-radius: 6px; border: 2px solid #1B1B1B; background: #F7F3EA">個人商店</span>
+</div></div>
+<div style="padding: 28px; background: #FFFFFF; border: 3px solid #1B1B1B; border-radius: 20px; display: flex; flex-direction: column; gap: 16px"><span style="font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.14em">ジャンル（墨2px枠）</span><div style="display: flex; gap: 8px; flex-wrap: wrap">
+<span style="font-size: 13px; font-weight: 700; padding: 3px 12px; border-radius: 6px; border: 2px solid #1B1B1B">カフェ</span><span style="font-size: 13px; font-weight: 700; padding: 3px 12px; border-radius: 6px; border: 2px solid #1B1B1B">飲食</span><span style="font-size: 13px; font-weight: 700; padding: 3px 12px; border-radius: 6px; border: 2px solid #1B1B1B">お菓子</span><span style="font-size: 13px; font-weight: 700; padding: 3px 12px; border-radius: 6px; border: 2px solid #1B1B1B">雑貨・ファッション</span><span style="font-size: 13px; font-weight: 700; padding: 3px 12px; border-radius: 6px; border: 2px solid #1B1B1B">工房・ギャラリー</span><span style="font-size: 13px; font-weight: 700; padding: 3px 12px; border-radius: 6px; border: 2px solid #1B1B1B">酒・発酵</span><span style="font-size: 13px; font-weight: 700; padding: 3px 12px; border-radius: 6px; border: 2px solid #1B1B1B">寺社・史跡</span><span style="font-size: 13px; font-weight: 700; padding: 3px 12px; border-radius: 6px; border: 2px solid #1B1B1B">宿</span><span style="font-size: 13px; font-weight: 700; padding: 3px 12px; border-radius: 6px; border: 2px solid #1B1B1B">サービス</span>
+</div></div>
+<div style="padding: 28px; background: #FFFFFF; border: 3px solid #1B1B1B; border-radius: 20px; display: flex; flex-direction: column; gap: 16px"><span style="font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.14em">記事カテゴリ・状態</span><div style="display: flex; gap: 8px; flex-wrap: wrap; align-items: center">
+<span style="font-size: 13px; font-weight: 700; padding: 4px 12px; border-radius: 6px; background: #D9782D; color: #FFFFFF">まとめ</span><span style="font-size: 13px; font-weight: 700; padding: 4px 12px; border-radius: 6px; background: #D9782D; color: #FFFFFF">インタビュー</span><span style="font-size: 13px; font-weight: 700; padding: 4px 12px; border-radius: 6px; background: #22388F; color: #F7F3EA">特集</span>
+<span style="display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 700"><span style="width: 10px; height: 10px; border-radius: 50%; background: #1F8A4C"></span>営業中</span>
+<span style="display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 700"><span style="width: 10px; height: 10px; border-radius: 50%; border: 2px solid #1B1B1B; box-sizing: border-box"></span>休業中</span>
+</div></div>
+</div>
+</section>
+
+<section style="display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; align-items: baseline; gap: 16px"><span style="font-family: 'DM Mono', monospace; font-size: 13px; letter-spacing: 0.14em">05 — CARDS</span><h2 style="margin: 0; font-family: 'Dela Gothic One', sans-serif; font-size: 36px; font-weight: 400">カード</h2></div>
+<div style="display: grid; grid-template-columns: 400px minmax(0, 1fr); gap: 40px; align-items: start">
+<div style="display: flex; flex-direction: column; gap: 12px"><span style="font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.14em">店舗カード PC</span>
+<a href="#" style="display: flex; flex-direction: column; background: #FFFFFF; border: 3px solid #1B1B1B; border-radius: 16px; box-shadow: 6px 6px 0 #1B1B1B; overflow: hidden; text-decoration: none; transition: transform .15s, box-shadow .15s" style-hover="transform: translate(-3px, -3px); box-shadow: 9px 9px 0 #1B1B1B; color: #1B1B1B">
+<div style="height: 220px; background: #E9E2D2; display: flex; align-items: center; justify-content: center; font-size: 14px; color: #5A5448; border-bottom: 3px solid #1B1B1B">[写真：今代司酒造]</div>
+<div style="padding: 24px; display: flex; flex-direction: column; gap: 12px"><div style="display: flex; gap: 8px"><span style="font-size: 13px; font-weight: 700; padding: 3px 12px; border-radius: 6px; border: 2px solid #22388F; background: #22388F; color: #F7F3EA">蔵元</span><span style="font-size: 13px; font-weight: 700; padding: 3px 12px; border-radius: 6px; border: 2px solid #1B1B1B">酒・発酵</span></div><div style="font-size: 24px; font-weight: 700">今代司酒造</div><div style="font-size: 15px; line-height: 1.7">新潟駅からいちばん近い酒蔵。蔵見学と直売所がある。</div></div>
+</a></div>
+<div style="display: flex; flex-direction: column; gap: 40px">
+<div style="display: grid; grid-template-columns: 358px minmax(0, 1fr); gap: 40px; align-items: start">
+<div style="display: flex; flex-direction: column; gap: 12px"><span style="font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.14em">店舗カード SP</span>
+<a href="#" style="display: flex; background: #FFFFFF; border: 3px solid #1B1B1B; border-radius: 14px; box-shadow: 4px 4px 0 #1B1B1B; overflow: hidden; text-decoration: none">
+<div style="width: 112px; min-height: 116px; flex-shrink: 0; background: #E9E2D2; border-right: 3px solid #1B1B1B; display: flex; align-items: center; justify-content: center; font-size: 11px; color: #5A5448">[写真]</div>
+<div style="padding: 14px 16px; display: flex; flex-direction: column; gap: 6px"><div style="display: flex; gap: 6px"><span style="font-size: 11px; font-weight: 700; padding: 1px 8px; border-radius: 5px; border: 2px solid #D9782D; background: #D9782D; color: #FFFFFF">商店街</span><span style="font-size: 11px; font-weight: 700; padding: 1px 8px; border-radius: 5px; border: 2px solid #1B1B1B">雑貨・ファッション</span></div><div style="font-size: 18px; font-weight: 700">松本商店</div><div style="font-size: 13px; line-height: 1.6">昭和レトロの雑貨がそろう店。</div></div>
+</a></div>
+<div style="display: flex; flex-direction: column; gap: 12px"><span style="font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.14em">読みものカード（藍の帯の上）</span>
+<div style="padding: 24px; background: #22388F; border-radius: 24px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px">
+<a href="#" style="display: flex; flex-direction: column; gap: 12px; padding: 22px; background: #F7F3EA; border-radius: 20px; text-decoration: none"><span style="width: 56px; height: 56px; border-radius: 50%; background: #D9782D; display: flex; align-items: center; justify-content: center; font-family: 'Dela Gothic One', sans-serif; font-size: 20px">01</span><span style="font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.14em">GUIDE</span><span style="font-size: 18px; font-weight: 700; line-height: 1.5">沼垂でランチするなら</span></a>
+<a href="#" style="display: flex; flex-direction: column; gap: 12px; padding: 22px; background: #F7F3EA; border-radius: 20px; text-decoration: none"><div style="height: 88px; background: #D9D2C2; border-radius: 12px"></div><span style="font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.14em">HISTORY</span><span style="font-size: 18px; font-weight: 700; line-height: 1.5">「沼垂」はなんと読む？</span></a>
+</div></div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px"><span style="font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.14em">記事中の店舗カード</span>
+<a href="#" style="display: flex; background: #FFFFFF; border: 3px solid #1B1B1B; border-radius: 16px; box-shadow: 6px 6px 0 #1B1B1B; overflow: hidden; text-decoration: none">
+<div style="width: 200px; flex-shrink: 0; background: #E9E2D2; border-right: 3px solid #1B1B1B; display: flex; align-items: center; justify-content: center; font-size: 12px; color: #5A5448">[写真]</div>
+<div style="padding: 20px 24px; display: flex; flex-direction: column; gap: 8px"><div style="display: flex; gap: 8px; align-items: center"><span style="font-size: 12px; font-weight: 700; padding: 3px 10px; border-radius: 6px; background: #22388F; color: #F7F3EA">蔵元</span><span style="font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.14em">SPOT</span></div><div style="font-size: 22px; font-weight: 700">峰村醸造</div><div style="font-size: 14px; line-height: 1.7">明治38年創業の味噌蔵。見学と直売所がある。</div><div style="font-size: 14px; font-weight: 700">お店の詳細を見る →</div></div>
+</a></div>
+</div>
+</div>
+</section>
+
+<section style="display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; align-items: baseline; gap: 16px"><span style="font-family: 'DM Mono', monospace; font-size: 13px; letter-spacing: 0.14em">06 — FORM</span><h2 style="margin: 0; font-family: 'Dela Gothic One', sans-serif; font-size: 36px; font-weight: 400">フォーム部品</h2></div>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; padding: 40px; background: #FFFFFF; border: 3px solid #1B1B1B; border-radius: 20px">
+<label style="display: flex; flex-direction: column; gap: 8px; font-size: 15px; font-weight: 700">入力欄（通常）<input type="text" placeholder="沼垂 花子" style="height: 52px; padding: 0 16px; border: 2px solid #1B1B1B; border-radius: 12px; background: #FFFFFF; font-size: 16px; font-weight: 400"></label>
+<label style="display: flex; flex-direction: column; gap: 8px; font-size: 15px; font-weight: 700">入力欄（フォーカス）<input type="text" value="you@example" style="height: 52px; padding: 0 16px; border: 2px solid #1B1B1B; outline: 3px solid #22388F; outline-offset: 2px; border-radius: 12px; background: #FFFFFF; font-size: 16px; font-weight: 400"></label>
+<label style="display: flex; flex-direction: column; gap: 8px; font-size: 15px; font-weight: 700">入力欄（エラー）<input type="text" value="" style="height: 52px; padding: 0 16px; border: 3px solid #D9782D; border-radius: 12px; background: #FFFFFF; font-size: 16px; font-weight: 400"><span style="display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 400"><span style="width: 18px; height: 18px; border-radius: 50%; background: #D9782D; border: 2px solid #1B1B1B; box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700">!</span>メールアドレスを入力してください</span></label>
+<label style="grid-column: span 2; display: flex; flex-direction: column; gap: 8px; font-size: 15px; font-weight: 700"><span>テキストエリア <span style="font-size: 12px; padding: 2px 8px; border-radius: 6px; background: #1B1B1B; color: #F7F3EA; margin-left: 6px">必須</span></span><textarea placeholder="どのページの、どの情報が変わっているかをお書きください" style="min-height: 140px; padding: 14px 16px; border: 2px solid #1B1B1B; border-radius: 12px; background: #FFFFFF; font-size: 16px; font-weight: 400; line-height: 1.8"></textarea></label>
+<div style="display: flex; flex-direction: column; gap: 12px"><span style="font-size: 15px; font-weight: 700">選択（ラジオ）</span>
+<span style="display: flex; align-items: center; gap: 10px; height: 48px; padding: 0 20px; border: 2px solid #1B1B1B; border-radius: 999px; background: #1B1B1B; color: #F7F3EA; font-size: 15px; font-weight: 700"><span style="width: 16px; height: 16px; box-sizing: border-box; border-radius: 50%; border: 2px solid #F7F3EA; background: #D9782D"></span>情報の訂正</span>
+<span style="display: flex; align-items: center; gap: 10px; height: 48px; padding: 0 20px; border: 2px solid #1B1B1B; border-radius: 999px; font-size: 15px; font-weight: 700"><span style="width: 16px; height: 16px; box-sizing: border-box; border-radius: 50%; border: 2px solid #1B1B1B"></span>掲載依頼</span>
+</div>
+<label style="display: flex; align-items: center; gap: 12px; min-height: 44px; font-size: 15px"><input type="checkbox" checked="" style="width: 22px; height: 22px; accent-color: #22388F; margin: 0"><span><a href="#">プライバシーポリシー</a> に同意する</span></label>
+<div style="display: flex; gap: 12px; align-items: center"><span style="display: inline-flex; align-items: center; height: 56px; padding: 0 36px; border-radius: 999px; background: #22388F; color: #F7F3EA; font-size: 16px; font-weight: 700">送信する</span><span style="display: inline-flex; align-items: center; height: 56px; padding: 0 36px; border-radius: 999px; background: #22388F; color: #F7F3EA; font-size: 16px; font-weight: 700; opacity: 0.45">送信する</span></div>
+<span style="align-self: center; font-size: 13px">右：同意前は押せない（45%）</span>
+</div>
+</section>
+
+<section style="display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; align-items: baseline; gap: 16px"><span style="font-family: 'DM Mono', monospace; font-size: 13px; letter-spacing: 0.14em">07 — BLOCKS</span><h2 style="margin: 0; font-family: 'Dela Gothic One', sans-serif; font-size: 36px; font-weight: 400">そのほかの部品</h2></div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; align-items: start">
+<div style="display: flex; flex-direction: column; gap: 24px">
+<dl style="margin: 0; background: #FFFFFF; border: 3px solid #1B1B1B; border-radius: 16px; padding: 8px 24px; display: flex; flex-direction: column">
+<div style="display: grid; grid-template-columns: 110px minmax(0, 1fr); gap: 16px; padding: 14px 0; border-bottom: 1px solid #D8D1C2"><dt style="font-weight: 700">住所</dt><dd style="margin: 0">[住所を記入]</dd></div>
+<div style="display: grid; grid-template-columns: 110px minmax(0, 1fr); gap: 16px; padding: 14px 0; border-bottom: 1px solid #D8D1C2"><dt style="font-weight: 700">営業時間</dt><dd style="margin: 0">[営業時間を記入]</dd></div>
+<div style="display: grid; grid-template-columns: 110px minmax(0, 1fr); gap: 16px; padding: 14px 0"><dt style="font-weight: 700">定休日</dt><dd style="margin: 0">[定休日を記入]</dd></div>
+</dl>
+<div style="padding: 18px 22px; border: 2px dashed #1B1B1B; border-radius: 12px; font-size: 14px; line-height: 1.8">この情報は <strong>[YYYY年M月D日]</strong> に確認しました。変わっているところがあれば、<a href="#">お知らせください</a>。</div>
+</div>
+<div style="padding: 40px 44px; background: #D9782D; border: 3px solid #1B1B1B; border-radius: 24px; box-shadow: 8px 8px 0 #1B1B1B; display: flex; flex-direction: column; gap: 16px">
+<div style="font-family: 'Dela Gothic One', sans-serif; font-size: 32px">新潟駅から、歩いて沼垂へ。</div>
+<div style="font-size: 16px">徒歩ルート・バス・駐車場 [所要時間は確認して記入]</div>
+<a href="#" style="align-self: flex-start; display: inline-flex; align-items: center; height: 56px; padding: 0 32px; background: #1B1B1B; color: #F7F3EA; border-radius: 999px; text-decoration: none; font-weight: 700">行き方を見る</a>
+</div>
+</div>
+</section>
+
+</div>
+</div>
+</x-dc>
+</body>
+</html>

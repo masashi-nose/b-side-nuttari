@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&amp;family=Zen+Kaku+Gothic+New:wght@400;500;700&amp;family=DM+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#D9D2C2;font-family:"Zen Kaku Gothic New",sans-serif;color:#1B1B1B}
+a{color:#1B1B1B}a:hover{color:#22388F}
+button{font-family:inherit;color:#1B1B1B}
+:focus-visible{outline:3px solid #22388F;outline-offset:2px}
+</style>
+</helmet>
+<div style="display: flex; gap: 80px; align-items: flex-start; padding: 64px; width: max-content">
+
+<div style="display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; align-items: baseline; gap: 10px; font-family: 'DM Mono', monospace; font-size: 13px; letter-spacing: 0.08em"><span style="padding: 3px 8px; background: #1B1B1B; color: #F7F3EA">PC</span><span>/access/ — 1440px</span></div>
+<div data-screen-label="アクセス PC" style="width: 1440px; box-sizing: border-box; display: flex; flex-direction: column; background: #F7F3EA; color: #1B1B1B; font-family: 'Zen Kaku Gothic New', sans-serif">
+
+<header style="display: flex; align-items: center; justify-content: space-between; padding: 28px 80px">
+<a href="Top.dc.html" style="display: inline-flex; align-items: center; gap: 12px; text-decoration: none">
+<span style="width: 44px; height: 44px; border-radius: 50%; background: #22388F; color: #F7F3EA; display: flex; align-items: center; justify-content: center; font-family: 'Dela Gothic One', sans-serif; font-size: 20px">B</span>
+<span style="font-family: 'Dela Gothic One', sans-serif; font-size: 24px">B SIDE NUTTARI</span>
+</a>
+<nav aria-label="メイン" style="display: flex; gap: 12px; font-size: 15px; font-weight: 700">
+<a href="Spots%20List.dc.html" style="text-decoration: none; padding: 10px 20px; border: 2px solid #1B1B1B; border-radius: 999px" style-hover="background: #1B1B1B; color: #F7F3EA">お店・スポット</a>
+<a href="Articles%20List.dc.html" style="text-decoration: none; padding: 10px 20px; border: 2px solid #1B1B1B; border-radius: 999px" style-hover="background: #1B1B1B; color: #F7F3EA">読みもの</a>
+<a href="Access.dc.html" aria-current="page" style="text-decoration: none; padding: 10px 20px; border: 2px solid #1B1B1B; border-radius: 999px; background: #1B1B1B; color: #F7F3EA">アクセス</a>
+<a href="About.dc.html" style="text-decoration: none; padding: 10px 20px; border: 2px solid #1B1B1B; border-radius: 999px" style-hover="background: #1B1B1B; color: #F7F3EA">このサイトについて</a>
+</nav>
+</header>
+
+<nav aria-label="パンくず" style="padding: 8px 80px 32px; font-size: 14px; display: flex; gap: 10px">
+<a href="Top.dc.html">トップ</a><span>／</span><span>アクセス</span>
+</nav>
+
+<section style="padding: 0 80px 56px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px; align-items: end">
+<div style="display: flex; flex-direction: column; gap: 16px">
+<span style="font-family: 'DM Mono', monospace; font-size: 14px; letter-spacing: 0.14em">ACCESS</span>
+<h1 style="margin: 0; font-family: 'Dela Gothic One', sans-serif; font-size: 64px; line-height: 1.2; font-weight: 400">新潟駅から、<br>歩いて沼垂へ。</h1>
+</div>
+<div style="display: flex; flex-direction: column; gap: 20px; padding-bottom: 10px">
+<p style="margin: 0; font-size: 18px; line-height: 1.9">沼垂テラス商店街は、新潟駅から歩いて行ける場所にあります。徒歩・バス・車、それぞれの行き方をまとめました。</p>
+<dl style="margin: 0; background: #FFFFFF; border: 3px solid #1B1B1B; border-radius: 16px; padding: 8px 24px; display: flex; flex-direction: column">
+<div style="display: grid; grid-template-columns: 110px minmax(0, 1fr); gap: 16px; padding: 14px 0; border-bottom: 1px solid #D8D1C2"><dt style="font-weight: 700">目的地</dt><dd style="margin: 0">沼垂テラス商店街</dd></div>
+<div style="display: grid; grid-template-columns: 110px minmax(0, 1fr); gap: 16px; padding: 14px 0"><dt style="font-weight: 700">住所</dt><dd style="margin: 0">[住所を記入]</dd></div>
+</dl>
+</div>
+</section>
+
+<nav aria-label="行き方" style="padding: 0 80px 112px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px">
+<sc-for list="{{ modes }}" as="m" hint-placeholder-count="3">
+<a href="{{ m.pcHref }}" style="display: flex; flex-direction: column; gap: 16px; padding: 32px; background: {{ m.bg }}; color: {{ m.fg }}; border: 3px solid #1B1B1B; border-radius: 20px; box-shadow: 6px 6px 0 #1B1B1B; text-decoration: none; transition: transform .15s, box-shadow .15s" style-hover="transform: translate(-3px, -3px); box-shadow: 9px 9px 0 #1B1B1B">
+<span style="display: flex; align-items: center; justify-content: space-between"><span style="width: 64px; height: 64px; border-radius: 50%; background: #F7F3EA; color: #1B1B1B; border: 2px solid #1B1B1B; display: flex; align-items: center; justify-content: center; font-family: 'Dela Gothic One', sans-serif; font-size: 24px">{{ m.no }}</span><span style="font-family: 'DM Mono', monospace; font-size: 13px; letter-spacing: 0.14em">{{ m.en }}</span></span>
+<span style="font-family: 'Dela Gothic One', sans-serif; font-size: 32px">{{ m.label }}</span>
+<span style="font-size: 15px; line-height: 1.7">{{ m.sub }}</span>
+<span style="font-weight: 700; font-size: 15px">くわしく見る ↓</span>
+</a>
+</sc-for>
+</nav>
+
+<section id="pc-walk" style="padding: 0 80px 112px; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 48px">
+<div style="grid-column: span 5; display: flex; flex-direction: column; gap: 28px">
+<div style="display: flex; flex-direction: column; gap: 12px"><span style="font-family: 'DM Mono', monospace; font-size: 13px; letter-spacing: 0.14em">01 — WALK</span><h2 style="margin: 0; font-family: 'Dela Gothic One', sans-serif; font-size: 48px; font-weight: 400">徒歩で</h2></div>
+<p style="margin: 0; font-size: 17px; line-height: 2">新潟駅から [所要時間は確認して記入]。[出口名] を出て、[通り名] を進みます。</p>
+<ol style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 0; border: 3px solid #1B1B1B; border-radius: 16px; background: #FFFFFF; overflow: hidden">
+<sc-for list="{{ walkSteps }}" as="s" hint-placeholder-count="4">
+<li style="display: grid; grid-template-columns: 48px minmax(0, 1fr); gap: 16px; align-items: start; padding: 18px 20px; border-bottom: {{ s.rule }}">
+<span style="width: 40px; height: 40px; border-radius: 50%; background: #D9782D; display: flex; align-items: center; justify-content: center; font-family: 'Dela Gothic One', sans-serif; font-size: 16px">{{ s.no }}</span>
+<span style="display: flex; flex-direction: column; gap: 4px; padding-top: 8px"><span style="font-weight: 700; font-size: 16px">{{ s.title }}</span><span style="font-size: 14px; line-height: 1.7">{{ s.body }}</span></span>
+</li>
+</sc-for>
+</ol>
+</div>
+<div style="grid-column: span 7; display: flex; flex-direction: column; gap: 16px">
+<div style="height: 560px; background: #E9E2D2; border: 3px solid #1B1B1B; border-radius: 24px; box-shadow: 8px 8px 0 #1B1B1B; display: flex; align-items: center; justify-content: center; font-size: 15px; color: #5A5448">[地図：新潟駅から沼垂テラス商店街までの徒歩ルート]</div>
+<a href="#" style="align-self: flex-start; display: inline-flex; align-items: center; height: 56px; padding: 0 32px; background: #22388F; color: #F7F3EA; border-radius: 999px; text-decoration: none; font-weight: 700" style-hover="background: #1B1B1B; color: #F7F3EA">地図アプリでルートを開く</a>
+</div>
+</section>
+
+<section id="pc-bus" style="margin: 0 80px 112px; padding: 64px; background: #22388F; color: #F7F3EA; border-radius: 32px; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 48px">
+<div style="grid-column: span 5; display: flex; flex-direction: column; gap: 20px">
+<span style="font-family: 'DM Mono', monospace; font-size: 13px; letter-spacing: 0.14em">02 — BUS</span>
+<h2 style="margin: 0; font-family: 'Dela Gothic One', sans-serif; font-size: 48px; font-weight: 400">バスで</h2>
+<p style="margin: 0; font-size: 17px; line-height: 2">雨の日や荷物が多い日は、バスが便利です。運賃・時刻は運行会社のサイトで確認してください。</p>
+</div>
+<dl style="grid-column: span 7; margin: 0; background: #F7F3EA; color: #1B1B1B; border-radius: 20px; padding: 12px 32px; display: flex; flex-direction: column">
+<div style="display: grid; grid-template-columns: 140px minmax(0, 1fr); gap: 16px; padding: 20px 0; border-bottom: 1px solid #D8D1C2"><dt style="font-weight: 700">乗り場</dt><dd style="margin: 0">新潟駅 [乗り場番号を記入]</dd></div>
+<div style="display: grid; grid-template-columns: 140px minmax(0, 1fr); gap: 16px; padding: 20px 0; border-bottom: 1px solid #D8D1C2"><dt style="font-weight: 700">系統</dt><dd style="margin: 0">[系統・行き先を記入]</dd></div>
+<div style="display: grid; grid-template-columns: 140px minmax(0, 1fr); gap: 16px; padding: 20px 0; border-bottom: 1px solid #D8D1C2"><dt style="font-weight: 700">降りるバス停</dt><dd style="margin: 0">[バス停名を記入]</dd></div>
+<div style="display: grid; grid-template-columns: 140px minmax(0, 1fr); gap: 16px; padding: 20px 0"><dt style="font-weight: 700">バス停から</dt><dd style="margin: 0">徒歩 [所要時間は確認して記入]</dd></div>
+</dl>
+</section>
+
+<section id="pc-car" style="padding: 0 80px 112px; display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 48px">
+<div style="grid-column: span 5; display: flex; flex-direction: column; gap: 20px">
+<span style="font-family: 'DM Mono', monospace; font-size: 13px; letter-spacing: 0.14em">03 — CAR</span>
+<h2 style="margin: 0; font-family: 'Dela Gothic One', sans-serif; font-size: 48px; font-weight: 400">車で・駐車場</h2>
+<p style="margin: 0; font-size: 17px; line-height: 2">[商店街の駐車場の有無、近くのコインパーキングについて確認して記入]</p>
+<div style="padding: 18px 22px; border: 2px dashed #1B1B1B; border-radius: 12px; font-size: 14px; line-height: 1.8">この情報は <strong>[YYYY年M月D日]</strong> に確認しました。変わっているところがあれば、<a href="About.dc.html">お知らせください</a>。</div>
+</div>
+<div style="grid-column: span 7; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px">
+<sc-for list="{{ parkings }}" as="p" hint-placeholder-count="2">
+<div style="background: #FFFFFF; border: 3px solid #1B1B1B; border-radius: 16px; box-shadow: 6px 6px 0 #1B1B1B; overflow: hidden; display: flex; flex-direction: column">
+<div style="height: 180px; background: #E9E2D2; border-bottom: 3px solid #1B1B1B; display: flex; align-items: center; justify-content: center; font-size: 13px; color: #5A5448">[地図：{{ p.name }}]</div>
+<div style="padding: 20px; display: flex; flex-direction: column; gap: 8px"><span style="align-self: flex-start; font-size: 12px; font-weight: 700; padding: 3px 10px; border-radius: 6px; border: 2px solid #1B1B1B">P</span><span style="font-size: 20px; font-weight: 700">{{ p.name }}</span><span style="font-size: 14px; line-height: 1.7">[台数・料金を確認して記入]</span></div>
+</div>
+</sc-for>
+</div>
+</section>
+
+<footer style="background: #1B1B1B; color: #F7F3EA; padding: 72px 80px; display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; justify-content: space-between; align-items: flex-start">
+<div style="font-family: 'Dela Gothic One', sans-serif; font-size: 36px">B SIDE NUTTARI</div>
+<nav aria-label="フッター" style="display: flex; gap: 32px; font-size: 15px; font-weight: 700">
+<a href="Spots%20List.dc.html" style="color: #F7F3EA; text-decoration: none">お店・スポット</a>
+<a href="Articles%20List.dc.html" style="color: #F7F3EA; text-decoration: none">読みもの</a>
+<a href="Access.dc.html" style="color: #F7F3EA; text-decoration: none">アクセス</a>
+<a href="About.dc.html" style="color: #F7F3EA; text-decoration: none">このサイトについて</a>
+</nav>
+</div>
+<p style="margin: 0; font-size: 14px; line-height: 1.8; color: #CFC9BC">このサイトは沼垂テラス商店街の公式サイトではありません。</p>
+</footer>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; align-items: baseline; gap: 10px; font-family: 'DM Mono', monospace; font-size: 13px; letter-spacing: 0.08em"><span style="padding: 3px 8px; background: #1B1B1B; color: #F7F3EA">SP</span><span>/access/ — 390px</span></div>
+<div data-screen-label="アクセス SP" style="width: 390px; box-sizing: border-box; display: flex; flex-direction: column; background: #F7F3EA; color: #1B1B1B; font-family: 'Zen Kaku Gothic New', sans-serif">
+
+<header style="display: flex; align-items: center; justify-content: space-between; padding: 16px 20px">
+<a href="Top.dc.html" style="display: inline-flex; align-items: center; gap: 10px; text-decoration: none">
+<span style="width: 36px; height: 36px; border-radius: 50%; background: #22388F; color: #F7F3EA; display: flex; align-items: center; justify-content: center; font-family: 'Dela Gothic One', sans-serif; font-size: 16px">B</span>
+<span style="font-family: 'Dela Gothic One', sans-serif; font-size: 18px">B SIDE NUTTARI</span>
+</a>
+<a href="SP%20Menu.dc.html" aria-label="メニューを開く" style="width: 48px; height: 48px; box-sizing: border-box; border: 2px solid #1B1B1B; border-radius: 50%; background: #F7F3EA; display: flex; align-items: center; justify-content: center">
+<svg width="20" height="14" viewBox="0 0 20 14" fill="none" stroke="#1B1B1B" stroke-width="2.4" stroke-linecap="round"><line x1="1" y1="2" x2="19" y2="2"></line><line x1="1" y1="12" x2="19" y2="12"></line></svg>
+</a>
+</header>
+
+<nav aria-label="パンくず" style="padding: 4px 20px 20px; font-size: 13px; display: flex; gap: 8px">
+<a href="Top.dc.html">トップ</a><span>／</span><span>アクセス</span>
+</nav>
+
+<section style="padding: 0 20px 28px; display: flex; flex-direction: column; gap: 14px">
+<span style="font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.14em">ACCESS</span>
+<h1 style="margin: 0; font-family: 'Dela Gothic One', sans-serif; font-size: 34px; line-height: 1.3; font-weight: 400">新潟駅から、<br>歩いて沼垂へ。</h1>
+<p style="margin: 0; font-size: 15px; line-height: 1.9">沼垂テラス商店街は、新潟駅から歩いて行ける場所にあります。徒歩・バス・車、それぞれの行き方をまとめました。</p>
+</section>
+
+<div role="tablist" aria-label="行き方" style="margin: 0 16px 24px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px">
+<sc-for list="{{ modes }}" as="m" hint-placeholder-count="3">
+<button type="button" role="tab" aria-selected="{{ m.active }}" onClick="{{ m.onClick }}" style="height: 56px; border: 2px solid #1B1B1B; border-radius: 999px; background: {{ m.tabBg }}; color: {{ m.tabFg }}; font-size: 15px; font-weight: 700; cursor: pointer">{{ m.short }}</button>
+</sc-for>
+</div>
+
+<sc-if value="{{ isWalk }}" hint-placeholder-val="{{ true }}">
+<section role="tabpanel" style="padding: 0 16px 64px; display: flex; flex-direction: column; gap: 16px">
+<div style="height: 260px; background: #E9E2D2; border: 3px solid #1B1B1B; border-radius: 18px; box-shadow: 5px 5px 0 #1B1B1B; display: flex; align-items: center; justify-content: center; padding: 20px; text-align: center; font-size: 13px; color: #5A5448">[地図：新潟駅から沼垂テラス商店街までの徒歩ルート]</div>
+<h2 style="margin: 12px 4px 0; font-family: 'Dela Gothic One', sans-serif; font-size: 24px; font-weight: 400">徒歩で</h2>
+<p style="margin: 0 4px; font-size: 15px; line-height: 1.9">新潟駅から [所要時間は確認して記入]。[出口名] を出て、[通り名] を進みます。</p>
+<ol style="margin: 0; padding: 0; list-style: none; border: 3px solid #1B1B1B; border-radius: 14px; background: #FFFFFF; overflow: hidden">
+<sc-for list="{{ walkSteps }}" as="s" hint-placeholder-count="4">
+<li style="display: grid; grid-template-columns: 36px minmax(0, 1fr); gap: 12px; padding: 14px 16px; border-bottom: {{ s.rule }}">
+<span style="width: 32px; height: 32px; border-radius: 50%; background: #D9782D; display: flex; align-items: center; justify-content: center; font-family: 'Dela Gothic One', sans-serif; font-size: 13px">{{ s.no }}</span>
+<span style="display: flex; flex-direction: column; gap: 2px; padding-top: 4px"><span style="font-weight: 700; font-size: 15px">{{ s.title }}</span><span style="font-size: 13px; line-height: 1.7">{{ s.body }}</span></span>
+</li>
+</sc-for>
+</ol>
+<a href="#" style="display: flex; align-items: center; justify-content: center; height: 52px; background: #22388F; color: #F7F3EA; border-radius: 999px; text-decoration: none; font-weight: 700">地図アプリでルートを開く</a>
+</section>
+</sc-if>
+
+<sc-if value="{{ isBus }}">
+<section role="tabpanel" style="margin: 0 16px 64px; padding: 28px 20px; background: #22388F; color: #F7F3EA; border-radius: 24px; display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-family: 'Dela Gothic One', sans-serif; font-size: 24px; font-weight: 400">バスで</h2>
+<p style="margin: 0; font-size: 15px; line-height: 1.9">雨の日や荷物が多い日は、バスが便利です。運賃・時刻は運行会社のサイトで確認してください。</p>
+<dl style="margin: 0; background: #F7F3EA; color: #1B1B1B; border-radius: 14px; padding: 4px 16px; display: flex; flex-direction: column; font-size: 14px">
+<div style="display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 10px; padding: 12px 0; border-bottom: 1px solid #D8D1C2"><dt style="font-weight: 700">乗り場</dt><dd style="margin: 0">新潟駅 [乗り場番号]</dd></div>
+<div style="display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 10px; padding: 12px 0; border-bottom: 1px solid #D8D1C2"><dt style="font-weight: 700">系統</dt><dd style="margin: 0">[系統・行き先]</dd></div>
+<div style="display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 10px; padding: 12px 0; border-bottom: 1px solid #D8D1C2"><dt style="font-weight: 700">降りるバス停</dt><dd style="margin: 0">[バス停名]</dd></div>
+<div style="display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 10px; padding: 12px 0"><dt style="font-weight: 700">バス停から</dt><dd style="margin: 0">徒歩 [所要時間]</dd></div>
+</dl>
+</section>
+</sc-if>
+
+<sc-if value="{{ isCar }}">
+<section role="tabpanel" style="padding: 0 16px 64px; display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0 4px; font-family: 'Dela Gothic One', sans-serif; font-size: 24px; font-weight: 400">車で・駐車場</h2>
+<p style="margin: 0 4px; font-size: 15px; line-height: 1.9">[商店街の駐車場の有無、近くのコインパーキングについて確認して記入]</p>
+<sc-for list="{{ parkings }}" as="p" hint-placeholder-count="2">
+<div style="display: flex; background: #FFFFFF; border: 3px solid #1B1B1B; border-radius: 14px; box-shadow: 4px 4px 0 #1B1B1B; overflow: hidden">
+<div style="width: 96px; min-height: 96px; flex-shrink: 0; background: #E9E2D2; border-right: 3px solid #1B1B1B; display: flex; align-items: center; justify-content: center; font-size: 11px; color: #5A5448">[地図]</div>
+<div style="padding: 14px 16px; display: flex; flex-direction: column; gap: 4px"><span style="font-size: 17px; font-weight: 700">{{ p.name }}</span><span style="font-size: 13px; line-height: 1.6">[台数・料金を確認して記入]</span></div>
+</div>
+</sc-for>
+<div style="padding: 14px 16px; border: 2px dashed #1B1B1B; border-radius: 12px; font-size: 13px; line-height: 1.8">この情報は <strong>[YYYY年M月D日]</strong> に確認しました。変わっているところがあれば、<a href="About.dc.html">お知らせください</a>。</div>
+</section>
+</sc-if>
+
+<footer style="background: #1B1B1B; color: #F7F3EA; padding: 40px 20px; display: flex; flex-direction: column; gap: 24px">
+<div style="font-family: 'Dela Gothic One', sans-serif; font-size: 26px">B SIDE NUTTARI</div>
+<nav aria-label="フッター" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px 16px; font-size: 15px; font-weight: 700">
+<a href="Spots%20List.dc.html" style="color: #F7F3EA; text-decoration: none; padding: 12px 0">お店・スポット</a>
+<a href="Articles%20List.dc.html" style="color: #F7F3EA; text-decoration: none; padding: 12px 0">読みもの</a>
+<a href="Access.dc.html" style="color: #F7F3EA; text-decoration: none; padding: 12px 0">アクセス</a>
+<a href="About.dc.html" style="color: #F7F3EA; text-decoration: none; padding: 12px 0">このサイトについて</a>
+</nav>
+<p style="margin: 0; font-size: 12px; line-height: 1.8; color: #CFC9BC">このサイトは沼垂テラス商店街の公式サイトではありません。</p>
+</footer>
+</div>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const MODES = [
+  { id: 'walk', no: '01', en: 'WALK', label: '徒歩で', short: '徒歩', sub: '新潟駅から [所要時間は確認して記入]', bg: '#D9782D', fg: '#1B1B1B' },
+  { id: 'bus', no: '02', en: 'BUS', label: 'バスで', short: 'バス', sub: '[系統・バス停名を確認して記入]', bg: '#22388F', fg: '#F7F3EA' },
+  { id: 'car', no: '03', en: 'CAR', label: '車で・駐車場', short: '車', sub: '[駐車場の情報を確認して記入]', bg: '#FFFFFF', fg: '#1B1B1B' }
+];
+const STEPS = [
+  { title: '新潟駅 [出口名] を出る', body: '[目印を記入]' },
+  { title: '[通り名] を進む', body: '[曲がる場所・目印を記入]' },
+  { title: '[交差点名] を曲がる', body: '[目印を記入]' },
+  { title: '沼垂テラス商店街に到着', body: '[商店街の入口の目印を記入]' }
+];
+class Component extends DCLogic {
+  state = { mode: 'walk' };
+  renderVals() {
+    const m = this.state.mode;
+    return {
+      modes: MODES.map((x) => ({ ...x, pcHref: `#pc-${x.id}`, active: x.id === m,
+        tabBg: x.id === m ? '#1B1B1B' : 'transparent', tabFg: x.id === m ? '#F7F3EA' : '#1B1B1B',
+        onClick: () => this.setState({ mode: x.id }) })),
+      isWalk: m === 'walk', isBus: m === 'bus', isCar: m === 'car',
+      walkSteps: STEPS.map((s, i) => ({ ...s, no: i + 1, rule: i < STEPS.length - 1 ? '1px solid #D8D1C2' : 'none' })),
+      parkings: [{ name: '[駐車場名1]' }, { name: '[駐車場名2]' }]
+    };
+  }
+}
+</script>
+</body>
+</html>

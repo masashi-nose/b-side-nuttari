@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&amp;family=Zen+Kaku+Gothic+New:wght@400;500;700&amp;family=DM+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#D9D2C2;font-family:"Zen Kaku Gothic New",sans-serif;color:#1B1B1B}
+a{color:#1B1B1B}a:hover{color:#22388F}
+button{font-family:inherit;color:#1B1B1B}
+:focus-visible{outline:3px solid #22388F;outline-offset:2px}
+</style>
+</helmet>
+<div style="display: flex; gap: 80px; align-items: flex-start; padding: 64px; width: max-content">
+
+<div style="display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; align-items: baseline; gap: 10px; font-family: 'DM Mono', monospace; font-size: 13px; letter-spacing: 0.08em"><span style="padding: 3px 8px; background: #1B1B1B; color: #F7F3EA">PC</span><span>/spots/ — 1440px</span></div>
+<div data-screen-label="店舗・スポット一覧 PC" style="width: 1440px; box-sizing: border-box; display: flex; flex-direction: column; background: #F7F3EA; color: #1B1B1B; font-family: 'Zen Kaku Gothic New', sans-serif">
+
+<header style="display: flex; align-items: center; justify-content: space-between; padding: 28px 80px">
+<a href="Top.dc.html" style="display: inline-flex; align-items: center; gap: 12px; text-decoration: none">
+<span style="width: 44px; height: 44px; border-radius: 50%; background: #22388F; color: #F7F3EA; display: flex; align-items: center; justify-content: center; font-family: 'Dela Gothic One', sans-serif; font-size: 20px">B</span>
+<span style="font-family: 'Dela Gothic One', sans-serif; font-size: 24px">B SIDE NUTTARI</span>
+</a>
+<nav aria-label="メイン" style="display: flex; gap: 12px; font-size: 15px; font-weight: 700">
+<a href="Spots%20List.dc.html" aria-current="page" style="text-decoration: none; padding: 10px 20px; border: 2px solid #1B1B1B; border-radius: 999px; background: #1B1B1B; color: #F7F3EA">お店・スポット</a>
+<a href="Articles%20List.dc.html" style="text-decoration: none; padding: 10px 20px; border: 2px solid #1B1B1B; border-radius: 999px">読みもの</a>
+<a href="Access.dc.html" style="text-decoration: none; padding: 10px 20px; border: 2px solid #1B1B1B; border-radius: 999px">アクセス</a>
+<a href="About.dc.html" style="text-decoration: none; padding: 10px 20px; border: 2px solid #1B1B1B; border-radius: 999px">このサイトについて</a>
+</nav>
+</header>
+
+<nav aria-label="パンくず" style="padding: 8px 80px 32px; font-size: 14px; display: flex; gap: 10px">
+<a href="Top.dc.html">トップ</a><span>／</span><span>お店・スポット</span>
+</nav>
+
+<section style="padding: 0 80px 56px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px; align-items: end">
+<div style="display: flex; flex-direction: column; gap: 16px">
+<span style="font-family: 'DM Mono', monospace; font-size: 14px; letter-spacing: 0.14em">SPOTS</span>
+<h1 style="margin: 0; font-family: 'Dela Gothic One', sans-serif; font-size: 64px; line-height: 1.2; font-weight: 400">お店とスポット</h1>
+</div>
+<p style="margin: 0; padding-bottom: 10px; font-size: 18px; line-height: 1.9; text-wrap: pretty">沼垂テラス商店街のお店、酒蔵・味噌蔵などの蔵元、神社やお寺まで。沼垂エリアのお店とスポットを、区分とジャンルで探せます。</p>
+</section>
+
+<section aria-label="絞り込み" style="margin: 0 80px; padding: 28px 32px; background: #FFFFFF; border: 3px solid #1B1B1B; border-radius: 20px; box-shadow: 6px 6px 0 #1B1B1B; display: flex; flex-direction: column; gap: 20px">
+<div style="display: flex; align-items: center; gap: 24px">
+<span style="width: 88px; flex-shrink: 0; font-family: 'DM Mono', monospace; font-size: 13px; letter-spacing: 0.14em">区分</span>
+<div role="group" aria-label="区分" style="display: flex; gap: 10px; flex-wrap: wrap">
+<sc-for list="{{ pc.kubuns }}" as="k" hint-placeholder-count="5">
+<button type="button" aria-pressed="{{ k.active }}" onClick="{{ k.onClick }}" style="display: inline-flex; align-items: center; gap: 10px; height: 48px; padding: 0 20px; border: 2px solid #1B1B1B; border-radius: 999px; background: {{ k.bg }}; color: {{ k.fg }}; font-size: 15px; font-weight: 700; cursor: pointer">
+<sc-if value="{{ k.hasDot }}"><span style="width: 12px; height: 12px; border-radius: 50%; background: {{ k.dot }}; border: 2px solid {{ k.fg }}; box-sizing: border-box"></span></sc-if>
+<span>{{ k.label }}</span>
+<sc-if value="{{ showCounts }}" hint-placeholder-val="{{ true }}"><span style="font-family: 'DM Mono', monospace; font-size: 13px; font-weight: 500">{{ k.count }}</span></sc-if>
+</button>
+</sc-for>
+</div>
+</div>
+<div style="height: 0; border-top: 2px dashed #1B1B1B"></div>
+<div style="display: flex; align-items: flex-start; gap: 24px">
+<span style="width: 88px; flex-shrink: 0; padding-top: 12px; font-family: 'DM Mono', monospace; font-size: 13px; letter-spacing: 0.14em">ジャンル</span>
+<div role="group" aria-label="ジャンル（複数選べます）" style="display: flex; gap: 10px; flex-wrap: wrap">
+<sc-for list="{{ pc.genres }}" as="g" hint-placeholder-count="9">
+<button type="button" aria-pressed="{{ g.active }}" disabled="{{ g.disabled }}" onClick="{{ g.onClick }}" style="display: inline-flex; align-items: center; gap: 8px; height: 44px; padding: 0 16px; border: 2px solid #1B1B1B; border-radius: 999px; background: {{ g.bg }}; color: {{ g.fg }}; opacity: {{ g.opacity }}; font-size: 14px; font-weight: 700; cursor: pointer">
+<sc-if value="{{ g.active }}"><span aria-hidden="true">✓</span></sc-if>
+<span>{{ g.label }}</span>
+<sc-if value="{{ showCounts }}" hint-placeholder-val="{{ true }}"><span style="font-family: 'DM Mono', monospace; font-size: 12px; font-weight: 500">{{ g.count }}</span></sc-if>
+</button>
+</sc-for>
+</div>
+</div>
+</section>
+
+<section style="padding: 48px 80px 112px; display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; align-items: baseline; justify-content: space-between; gap: 24px">
+<div style="display: flex; align-items: baseline; gap: 16px">
+<span style="font-family: 'Dela Gothic One', sans-serif; font-size: 48px">{{ pc.total }}<span style="font-size: 24px">件</span></span>
+<span style="font-size: 15px; font-weight: 700">{{ pc.summary }}</span>
+<sc-if value="{{ pc.filtered }}"><button type="button" onClick="{{ pc.reset }}" style="height: 44px; padding: 0 4px; border: none; background: transparent; font-size: 15px; font-weight: 700; text-decoration: underline; cursor: pointer">条件をリセット</button></sc-if>
+</div>
+<span style="font-size: 14px">閉店したお店は一覧に載せていません。</span>
+</div>
+
+<div style="display: grid; grid-template-columns: {{ pcCols }}; gap: 40px; align-items: start">
+
+<sc-if value="{{ mapTop }}" hint-placeholder-val="{{ true }}">
+<div style="display: grid; grid-template-columns: minmax(0, 1fr) 280px; border: 3px solid #1B1B1B; border-radius: 24px; overflow: hidden; background: #FFFFFF">
+<div style="height: 380px; background: #E9E2D2; border-right: 3px solid #1B1B1B; display: flex; align-items: center; justify-content: center; font-size: 15px; color: #5A5448">[エリアマップ：絞り込んだ{{ pc.total }}件をピンで表示]</div>
+<div style="padding: 28px; display: flex; flex-direction: column; gap: 16px">
+<span style="font-family: 'DM Mono', monospace; font-size: 13px; letter-spacing: 0.14em">MAP</span>
+<div style="font-family: 'Dela Gothic One', sans-serif; font-size: 26px; line-height: 1.4">地図で探す</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<sc-for list="{{ legend }}" as="l" hint-placeholder-count="4">
+<div style="display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 700"><span style="width: 16px; height: 16px; border-radius: 50%; background: {{ l.bg }}; border: 2px solid #1B1B1B; box-sizing: border-box"></span>{{ l.label }}</div>
+</sc-for>
+</div>
+<a href="#" style="margin-top: auto; display: inline-flex; align-items: center; justify-content: center; height: 48px; border: 2px solid #1B1B1B; border-radius: 999px; text-decoration: none; font-weight: 700; font-size: 15px">地図アプリで開く</a>
+</div>
+</div>
+</sc-if>
+
+<div style="display: flex; flex-direction: column; gap: 40px">
+<sc-if value="{{ pc.empty }}">
+<div style="padding: 56px; border: 2px dashed #1B1B1B; border-radius: 20px; display: flex; flex-direction: column; align-items: flex-start; gap: 16px">
+<div style="font-family: 'Dela Gothic One', sans-serif; font-size: 28px">条件に合うお店・スポットはありません</div>
+<button type="button" onClick="{{ pc.reset }}" style="height: 52px; padding: 0 28px; background: #22388F; color: #F7F3EA; border: none; border-radius: 999px; font-size: 15px; font-weight: 700; cursor: pointer">条件をリセット</button>
+</div>
+</sc-if>
+<div style="display: grid; grid-template-columns: {{ pcCardCols }}; gap: 32px">
+<sc-for list="{{ pc.items }}" as="s" hint-placeholder-count="6">
+<a href="{{ s.href }}" style="display: flex; flex-direction: column; background: #FFFFFF; border: 3px solid #1B1B1B; border-radius: 16px; box-shadow: 6px 6px 0 #1B1B1B; overflow: hidden; text-decoration: none; transition: transform .15s, box-shadow .15s" style-hover="transform: translate(-3px, -3px); box-shadow: 9px 9px 0 #1B1B1B; color: #1B1B1B">
+<div style="height: 220px; background: #E9E2D2; display: flex; align-items: center; justify-content: center; font-size: 14px; color: #5A5448; border-bottom: 3px solid #1B1B1B">[写真：{{ s.name }}]</div>
+<div style="padding: 24px; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; gap: 8px">
+<span style="font-size: 13px; font-weight: 700; padding: 3px 12px; border-radius: 6px; border: 2px solid {{ s.kbd }}; background: {{ s.kbg }}; color: {{ s.kfg }}">{{ s.kubun }}</span>
+<span style="font-size: 13px; font-weight: 700; padding: 3px 12px; border-radius: 6px; border: 2px solid #1B1B1B">{{ s.genre }}</span>
+</div>
+<div style="font-size: 24px; font-weight: 700; line-height: 1.4">{{ s.name }}</div>
+<div style="font-size: 15px; line-height: 1.7">{{ s.intro }}</div>
+</div>
+</a>
+</sc-for>
+</div>
+<sc-if value="{{ pc.hasMore }}">
+<button type="button" onClick="{{ pc.more }}" style="align-self: flex-start; height: 56px; padding: 0 32px; border: 2px solid #1B1B1B; border-radius: 999px; background: #F7F3EA; font-size: 16px; font-weight: 700; cursor: pointer" style-hover="background: #1B1B1B; color: #F7F3EA">もっと見る（残り{{ pc.rest }}件）</button>
+</sc-if>
+</div>
+
+<sc-if value="{{ mapSide }}">
+<div style="position: sticky; top: 24px; display: flex; flex-direction: column; border: 3px solid #1B1B1B; border-radius: 24px; box-shadow: 6px 6px 0 #1B1B1B; overflow: hidden; background: #FFFFFF">
+<div style="height: 560px; background: #E9E2D2; border-bottom: 3px solid #1B1B1B; display: flex; align-items: center; justify-content: center; padding: 24px; text-align: center; font-size: 15px; color: #5A5448">[エリアマップ：絞り込んだ{{ pc.total }}件をピンで表示]</div>
+<div style="padding: 20px 24px; display: flex; flex-wrap: wrap; gap: 10px 18px">
+<sc-for list="{{ legend }}" as="l" hint-placeholder-count="4">
+<div style="display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 700"><span style="width: 14px; height: 14px; border-radius: 50%; background: {{ l.bg }}; border: 2px solid #1B1B1B; box-sizing: border-box"></span>{{ l.label }}</div>
+</sc-for>
+</div>
+</div>
+</sc-if>
+
+</div>
+</section>
+
+<section style="margin: 0 80px 112px; padding: 56px 64px; background: #D9782D; border: 3px solid #1B1B1B; border-radius: 24px; box-shadow: 8px 8px 0 #1B1B1B; display: flex; align-items: center; justify-content: space-between">
+<div style="display: flex; flex-direction: column; gap: 12px">
+<div style="font-family: 'Dela Gothic One', sans-serif; font-size: 40px">新潟駅から、歩いて沼垂へ。</div>
+<div style="font-size: 17px">徒歩ルート・バス・駐車場 [所要時間は確認して記入]</div>
+</div>
+<a href="Access.dc.html" style="display: inline-flex; align-items: center; height: 56px; padding: 0 32px; background: #1B1B1B; color: #F7F3EA; border-radius: 999px; text-decoration: none; font-weight: 700">行き方を見る</a>
+</section>
+
+<footer style="background: #1B1B1B; color: #F7F3EA; padding: 72px 80px; display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; justify-content: space-between; align-items: flex-start">
+<div style="font-family: 'Dela Gothic One', sans-serif; font-size: 36px">B SIDE NUTTARI</div>
+<nav aria-label="フッター" style="display: flex; gap: 32px; font-size: 15px; font-weight: 700">
+<a href="Spots%20List.dc.html" style="color: #F7F3EA; text-decoration: none">お店・スポット</a>
+<a href="Articles%20List.dc.html" style="color: #F7F3EA; text-decoration: none">読みもの</a>
+<a href="Access.dc.html" style="color: #F7F3EA; text-decoration: none">アクセス</a>
+<a href="About.dc.html" style="color: #F7F3EA; text-decoration: none">このサイトについて</a>
+</nav>
+</div>
+<p style="margin: 0; font-size: 14px; line-height: 1.8; color: #CFC9BC">このサイトは沼垂テラス商店街の公式サイトではありません。</p>
+</footer>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; align-items: baseline; gap: 10px; font-family: 'DM Mono', monospace; font-size: 13px; letter-spacing: 0.08em"><span style="padding: 3px 8px; background: #1B1B1B; color: #F7F3EA">SP</span><span>/spots/ — 390px</span></div>
+<div data-screen-label="店舗・スポット一覧 SP" style="width: 390px; box-sizing: border-box; display: flex; flex-direction: column; background: #F7F3EA; color: #1B1B1B; font-family: 'Zen Kaku Gothic New', sans-serif">
+
+<header style="display: flex; align-items: center; justify-content: space-between; padding: 16px 20px">
+<a href="Top.dc.html" style="display: inline-flex; align-items: center; gap: 10px; text-decoration: none">
+<span style="width: 36px; height: 36px; border-radius: 50%; background: #22388F; color: #F7F3EA; display: flex; align-items: center; justify-content: center; font-family: 'Dela Gothic One', sans-serif; font-size: 16px">B</span>
+<span style="font-family: 'Dela Gothic One', sans-serif; font-size: 18px">B SIDE NUTTARI</span>
+</a>
+<a href="SP%20Menu.dc.html" aria-label="メニューを開く" style="width: 48px; height: 48px; box-sizing: border-box; border: 2px solid #1B1B1B; border-radius: 50%; background: #F7F3EA; display: flex; align-items: center; justify-content: center">
+<svg width="20" height="14" viewBox="0 0 20 14" fill="none" stroke="#1B1B1B" stroke-width="2.4" stroke-linecap="round"><line x1="1" y1="2" x2="19" y2="2"></line><line x1="1" y1="12" x2="19" y2="12"></line></svg>
+</a>
+</header>
+
+<nav aria-label="パンくず" style="padding: 4px 20px 20px; font-size: 13px; display: flex; gap: 8px">
+<a href="Top.dc.html">トップ</a><span>／</span><span>お店・スポット</span>
+</nav>
+
+<section style="padding: 0 20px 28px; display: flex; flex-direction: column; gap: 12px">
+<span style="font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.14em">SPOTS</span>
+<h1 style="margin: 0; font-family: 'Dela Gothic One', sans-serif; font-size: 34px; line-height: 1.25; font-weight: 400">お店とスポット</h1>
+<p style="margin: 0; font-size: 15px; line-height: 1.9; text-wrap: pretty">沼垂テラス商店街のお店、酒蔵・味噌蔵などの蔵元、神社やお寺まで。沼垂エリアのお店とスポットを、区分とジャンルで探せます。</p>
+</section>
+
+<section style="margin: 0 16px 28px; display: flex; flex-direction: column; border: 3px solid #1B1B1B; border-radius: 18px; overflow: hidden; background: #FFFFFF">
+<div style="height: 220px; background: #E9E2D2; border-bottom: 3px solid #1B1B1B; display: flex; align-items: center; justify-content: center; font-size: 13px; color: #5A5448">[エリアマップ：{{ sp.total }}件をピンで表示]</div>
+<div style="padding: 12px 16px; display: flex; flex-wrap: wrap; gap: 6px 14px">
+<sc-for list="{{ legend }}" as="l" hint-placeholder-count="4">
+<div style="display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 700"><span style="width: 12px; height: 12px; border-radius: 50%; background: {{ l.bg }}; border: 2px solid #1B1B1B; box-sizing: border-box"></span>{{ l.label }}</div>
+</sc-for>
+</div>
+</section>
+
+<section aria-label="絞り込み" style="padding: 0 0 20px; display: flex; flex-direction: column; gap: 12px">
+<div role="group" aria-label="区分" style="display: flex; gap: 8px; overflow-x: auto; padding: 0 20px 4px">
+<sc-for list="{{ sp.kubuns }}" as="k" hint-placeholder-count="5">
+<button type="button" aria-pressed="{{ k.active }}" onClick="{{ k.onClick }}" style="flex-shrink: 0; display: inline-flex; align-items: center; gap: 8px; height: 44px; padding: 0 16px; border: 2px solid #1B1B1B; border-radius: 999px; background: {{ k.bg }}; color: {{ k.fg }}; font-size: 14px; font-weight: 700; white-space: nowrap; cursor: pointer">
+<sc-if value="{{ k.hasDot }}"><span style="width: 10px; height: 10px; border-radius: 50%; background: {{ k.dot }}; border: 2px solid {{ k.fg }}; box-sizing: border-box"></span></sc-if>
+<span>{{ k.label }}</span>
+<sc-if value="{{ showCounts }}" hint-placeholder-val="{{ true }}"><span style="font-family: 'DM Mono', monospace; font-size: 12px; font-weight: 500">{{ k.count }}</span></sc-if>
+</button>
+</sc-for>
+</div>
+<div style="margin: 0 16px; border: 2px solid #1B1B1B; border-radius: 16px; background: #FFFFFF; overflow: hidden">
+<button type="button" aria-expanded="{{ sp.genreOpen }}" onClick="{{ sp.toggleGenre }}" style="width: 100%; height: 52px; padding: 0 16px; border: none; background: transparent; display: flex; align-items: center; justify-content: space-between; font-size: 15px; font-weight: 700; cursor: pointer">
+<span style="display: flex; align-items: center; gap: 10px">ジャンルで絞り込む<sc-if value="{{ sp.genreCount }}"><span style="min-width: 24px; height: 24px; padding: 0 6px; box-sizing: border-box; border-radius: 999px; background: #22388F; color: #F7F3EA; font-family: 'DM Mono', monospace; font-size: 12px; display: inline-flex; align-items: center; justify-content: center">{{ sp.genreCount }}</span></sc-if></span>
+<span aria-hidden="true" style="font-size: 14px">{{ sp.chev }}</span>
+</button>
+<sc-if value="{{ sp.genreOpen }}">
+<div style="padding: 4px 12px 14px; display: flex; flex-wrap: wrap; gap: 8px; border-top: 2px dashed #1B1B1B; padding-top: 14px">
+<sc-for list="{{ sp.genres }}" as="g" hint-placeholder-count="9">
+<button type="button" aria-pressed="{{ g.active }}" disabled="{{ g.disabled }}" onClick="{{ g.onClick }}" style="display: inline-flex; align-items: center; gap: 6px; height: 44px; padding: 0 14px; border: 2px solid #1B1B1B; border-radius: 999px; background: {{ g.bg }}; color: {{ g.fg }}; opacity: {{ g.opacity }}; font-size: 13px; font-weight: 700; cursor: pointer">
+<sc-if value="{{ g.active }}"><span aria-hidden="true">✓</span></sc-if>
+<span>{{ g.label }}</span>
+<sc-if value="{{ showCounts }}" hint-placeholder-val="{{ true }}"><span style="font-family: 'DM Mono', monospace; font-size: 11px; font-weight: 500">{{ g.count }}</span></sc-if>
+</button>
+</sc-for>
+</div>
+</sc-if>
+</div>
+</section>
+
+<section style="padding: 0 16px 64px; display: flex; flex-direction: column; gap: 16px">
+<div style="padding: 0 4px; display: flex; align-items: center; justify-content: space-between; min-height: 44px">
+<div style="display: flex; align-items: baseline; gap: 8px">
+<span style="font-family: 'Dela Gothic One', sans-serif; font-size: 28px">{{ sp.total }}<span style="font-size: 16px">件</span></span>
+<span style="font-size: 12px">閉店したお店は載せていません</span>
+</div>
+<sc-if value="{{ sp.filtered }}"><button type="button" onClick="{{ sp.reset }}" style="height: 44px; padding: 0; border: none; background: transparent; font-size: 14px; font-weight: 700; text-decoration: underline; cursor: pointer">リセット</button></sc-if>
+</div>
+<sc-if value="{{ sp.empty }}">
+<div style="padding: 28px 20px; border: 2px dashed #1B1B1B; border-radius: 16px; display: flex; flex-direction: column; gap: 14px">
+<div style="font-family: 'Dela Gothic One', sans-serif; font-size: 20px; line-height: 1.5">条件に合うお店・スポットはありません</div>
+<button type="button" onClick="{{ sp.reset }}" style="height: 52px; background: #22388F; color: #F7F3EA; border: none; border-radius: 999px; font-size: 15px; font-weight: 700; cursor: pointer">条件をリセット</button>
+</div>
+</sc-if>
+<sc-for list="{{ sp.items }}" as="s" hint-placeholder-count="6">
+<a href="{{ s.href }}" style="display: flex; background: #FFFFFF; border: 3px solid #1B1B1B; border-radius: 14px; box-shadow: 4px 4px 0 #1B1B1B; overflow: hidden; text-decoration: none">
+<div style="width: 112px; min-height: 120px; flex-shrink: 0; background: #E9E2D2; border-right: 3px solid #1B1B1B; display: flex; align-items: center; justify-content: center; font-size: 11px; color: #5A5448; text-align: center; padding: 8px; box-sizing: border-box">[写真]</div>
+<div style="padding: 14px 16px; display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div style="display: flex; gap: 6px; flex-wrap: wrap">
+<span style="font-size: 11px; font-weight: 700; padding: 1px 8px; border-radius: 5px; border: 2px solid {{ s.kbd }}; background: {{ s.kbg }}; color: {{ s.kfg }}">{{ s.kubun }}</span>
+<span style="font-size: 11px; font-weight: 700; padding: 1px 8px; border-radius: 5px; border: 2px solid #1B1B1B">{{ s.genre }}</span>
+</div>
+<div style="font-size: 18px; font-weight: 700; line-height: 1.4">{{ s.name }}</div>
+<div style="font-size: 13px; line-height: 1.6">{{ s.intro }}</div>
+</div>
+</a>
+</sc-for>
+<sc-if value="{{ sp.hasMore }}">
+<button type="button" onClick="{{ sp.more }}" style="height: 52px; margin-top: 4px; border: 2px solid #1B1B1B; border-radius: 999px; background: #F7F3EA; font-size: 15px; font-weight: 700; cursor: pointer">もっと見る（残り{{ sp.rest }}件）</button>
+</sc-if>
+</section>
+
+<section style="margin: 0 16px 64px; padding: 28px 20px; background: #D9782D; border: 3px solid #1B1B1B; border-radius: 20px; box-shadow: 5px 5px 0 #1B1B1B; display: flex; flex-direction: column; gap: 12px">
+<div style="font-family: 'Dela Gothic One', sans-serif; font-size: 24px; line-height: 1.4">新潟駅から、<br>歩いて沼垂へ。</div>
+<div style="font-size: 14px">徒歩ルート・バス・駐車場 [所要時間は確認して記入]</div>
+<a href="Access.dc.html" style="display: flex; align-items: center; justify-content: center; height: 52px; margin-top: 4px; background: #1B1B1B; color: #F7F3EA; border-radius: 999px; text-decoration: none; font-weight: 700">行き方を見る</a>
+</section>
+
+<footer style="background: #1B1B1B; color: #F7F3EA; padding: 40px 20px; display: flex; flex-direction: column; gap: 24px">
+<div style="font-family: 'Dela Gothic One', sans-serif; font-size: 26px">B SIDE NUTTARI</div>
+<nav aria-label="フッター" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px 16px; font-size: 15px; font-weight: 700">
+<a href="Spots%20List.dc.html" style="color: #F7F3EA; text-decoration: none; padding: 12px 0">お店・スポット</a>
+<a href="Articles%20List.dc.html" style="color: #F7F3EA; text-decoration: none; padding: 12px 0">読みもの</a>
+<a href="Access.dc.html" style="color: #F7F3EA; text-decoration: none; padding: 12px 0">アクセス</a>
+<a href="About.dc.html" style="color: #F7F3EA; text-decoration: none; padding: 12px 0">このサイトについて</a>
+</nav>
+<p style="margin: 0; font-size: 12px; line-height: 1.8; color: #CFC9BC">このサイトは沼垂テラス商店街の公式サイトではありません。</p>
+</footer>
+</div>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;pcMapLayout&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;top&quot;,&quot;side&quot;],&quot;default&quot;:&quot;top&quot;,&quot;tsType&quot;:&quot;'top'|'side'&quot;,&quot;section&quot;:&quot;レイアウト&quot;},&quot;pageSize&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:12,&quot;min&quot;:6,&quot;max&quot;:46,&quot;step&quot;:3,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;レイアウト&quot;},&quot;showCounts&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;絞り込み&quot;}}">
+const RAW = `OKASHI LAB.|商店街|sweets|駄菓子・お菓子
+Ploot|商店街|goods|観葉植物・建築設計
+taruhi glass works|商店街|craft|ガラス工房
+編むと紡ぐ|商店街|cafe|カフェ
+爪塗装noa|商店街|service|ネイルサロン
+VOST COFFEE|商店街|cafe|カフェ
+大佐渡たむら|商店街|food|大衆割烹
+TANKON|商店街|goods|家具・食品・雑貨
+佐藤青果物店|商店街|food|青果
+rium – atelier & shop|商店街|goods|セレクトショップ
+テラスオフィス|商店街|goods|管理オフィス・雑貨
+青人窯|商店街|craft|陶芸工房・体験
+eternal flower|商店街|goods|花
+K.M.ヴィンテージ|商店街|goods|ヴィンテージレコード
+nemon|商店街|goods|アクセサリー・ファッション
+アトリエNOVI|商店街|craft|アトリエ
+SUNNY personal style|商店街|service|顔タイプ・骨格診断
+居酒屋め|商店街|food|居酒屋
+mountain△grocery|商店街|cafe|カフェ
+work place シロツメ舎|商店街|goods|糸とビーズのアクセサリー
+ニカイGallery|商店街|craft|ギャラリー
+ひとつぼし雑貨店|商店街|goods|雑貨・クラフトビール
+Rod Sagan|商店街|goods|ファッション・雑貨
+しごと場 灯台|商店街|service|コワーキングスペース
+spice curry podoco|商店街|food|カレー
+松本商店|商店街|goods|昭和レトロ雑貨
+Oldtown Dessert Company|商店街|sweets|菓子工房
+ヒガナ|商店街|sweets|焼菓子
+なり -nuttari NARI-|商店街|stay|ゲストハウス
+KADO shoe repair & crafts|商店街|service|靴修理・クラフト
+占い。テラス|商店街|service|占い
+歩み|商店街|service|シャンプー屋
+atelier gallery mo|商店街|craft|アトリエ・ギャラリー
+今代司酒造|蔵元|ferment|酒蔵
+峰村醸造|蔵元|ferment|味噌蔵
+古町糀製造所 蔵座敷店|蔵元|ferment|糀
+沼垂白山神社|スポット|shrine|神社
+蒲原神社|スポット|shrine|神社
+乙子神社|スポット|shrine|神社
+法光院|スポット|shrine|寺院
+真善寺|スポット|shrine|寺院
+龍雲寺|スポット|shrine|寺院
+悉地院|スポット|shrine|寺院
+光照寺|スポット|shrine|寺院
+小唄勝太郎の碑|スポット|shrine|記念碑
+沼垂ビアパブ|個人商店|food|ビアパブ`;
+const INTRO = {
+  '今代司酒造': '新潟駅からいちばん近い酒蔵。蔵見学と直売所がある。',
+  '峰村醸造': '明治38年創業の味噌蔵。見学と直売所がある。',
+  '沼垂白山神社': '沼垂の総鎮守。',
+  '蒲原神社': '蒲原まつり（6月30日〜7月2日）の神社。',
+  '乙子神社': '白山神社の裏手にある神社。',
+  '法光院': '806年開山と伝わる寺院。',
+  '松本商店': '昭和レトロの雑貨がそろう店。',
+  'K.M.ヴィンテージ': 'ヴィンテージレコードの店。',
+  'rium – atelier & shop': '2026年8月にオープンしたセレクトショップ。'
+};
+const GENRES = [['cafe','カフェ'],['food','飲食'],['sweets','お菓子'],['goods','雑貨・ファッション'],['craft','工房・ギャラリー'],['ferment','酒・発酵'],['shrine','寺社・史跡'],['stay','宿'],['service','サービス']];
+const GL = Object.fromEntries(GENRES);
+const KUBUN = {
+  '商店街': { bg: '#D9782D', fg: '#FFFFFF', bd: '#D9782D' },
+  '蔵元': { bg: '#22388F', fg: '#F7F3EA', bd: '#22388F' },
+  'スポット': { bg: '#1B1B1B', fg: '#F7F3EA', bd: '#1B1B1B' },
+  '個人商店': { bg: '#F7F3EA', fg: '#1B1B1B', bd: '#1B1B1B' }
+};
+const SPOTS = RAW.split('\n').map((l) => {
+  const [name, kubun, g, detail] = l.split('|');
+  const k = KUBUN[kubun];
+  return { name, kubun, g, genre: GL[g], detail, status: '営業中', intro: INTRO[name] || `［ひとこと紹介：${detail}］`, kbg: k.bg, kfg: k.fg, kbd: k.bd, href: name === '今代司酒造' ? 'Spot%20Detail.dc.html' : '#' };
+}).filter((s) => s.status !== '閉店');
+
+class Component extends DCLogic {
+  state = { pc: { k: 'all', g: [], all: false }, sp: { k: 'all', g: [], all: false, open: false } };
+  upd(key, patch) { this.setState((s) => ({ [key]: { ...s[key], ...patch } })); }
+  view(key, pageSize) {
+    const st = this.state[key];
+    const inK = (s, k) => k === 'all' || s.kubun === k;
+    const inG = (s) => st.g.length === 0 || st.g.includes(s.g);
+    const list = SPOTS.filter((s) => inK(s, st.k) && inG(s));
+    const kubuns = [['all', 'すべて'], ...Object.keys(KUBUN).map((k) => [k, k])].map(([id, label]) => {
+      const active = st.k === id;
+      return { label, active, hasDot: id !== 'all', dot: id === 'all' ? '' : KUBUN[id].bg,
+        bg: active ? '#1B1B1B' : 'transparent', fg: active ? '#F7F3EA' : '#1B1B1B',
+        count: SPOTS.filter((s) => inK(s, id) && inG(s)).length,
+        onClick: () => this.upd(key, { k: id, all: false }) };
+    });
+    const genres = GENRES.map(([id, label]) => {
+      const active = st.g.includes(id);
+      const count = SPOTS.filter((s) => inK(s, st.k) && s.g === id).length;
+      return { label, active, count, disabled: count === 0 && !active, opacity: count === 0 && !active ? 0.4 : 1,
+        bg: active ? '#22388F' : '#FFFFFF', fg: active ? '#F7F3EA' : '#1B1B1B',
+        onClick: () => this.upd(key, { g: active ? st.g.filter((x) => x !== id) : [...st.g, id], all: false }) };
+    });
+    const shown = st.all ? list : list.slice(0, pageSize);
+    const parts = [st.k === 'all' ? null : st.k, ...st.g.map((x) => GL[x])].filter(Boolean);
+    return {
+      kubuns, genres, items: shown, total: list.length, empty: list.length === 0,
+      hasMore: list.length > shown.length, rest: list.length - shown.length,
+      filtered: st.k !== 'all' || st.g.length > 0,
+      summary: parts.length ? parts.join('・') : 'すべての区分・ジャンル',
+      genreOpen: !!st.open, genreCount: st.g.length || null, chev: st.open ? '▲' : '▼',
+      toggleGenre: () => this.upd(key, { open: !st.open }),
+      more: () => this.upd(key, { all: true }),
+      reset: () => this.upd(key, { k: 'all', g: [], all: false })
+    };
+  }
+  renderVals() {
+    const mapSide = (this.props.pcMapLayout ?? 'top') === 'side';
+    const n = this.props.pageSize ?? 12;
+    return {
+      pc: this.view('pc', n), sp: this.view('sp', Math.max(4, Math.round(n * 0.75))),
+      showCounts: this.props.showCounts ?? true,
+      mapTop: !mapSide, mapSide,
+      pcCols: mapSide ? 'minmax(0, 1fr) 440px' : 'minmax(0, 1fr)',
+      pcCardCols: mapSide ? 'repeat(2, minmax(0, 1fr))' : 'repeat(3, minmax(0, 1fr))',
+      legend: Object.entries(KUBUN).map(([label, k]) => ({ label, bg: k.bg }))
+    };
+  }
+}
+</script>
+</body>
+</html>

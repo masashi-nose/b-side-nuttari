@@ -1,0 +1,13 @@
+node_modules
+.next
+out
+build
+coverage
+package-lock.json
+pnpm-lock.yaml
+
+# Claude Design の書き出し（整形しない）
+design/
+
+# 日本語の手書きドキュメント（Prettier は全角文字の幅を数えないので表がずれる）
+*.md
