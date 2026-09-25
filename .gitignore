@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# sanity
+!.env.local.example
+/.sanity/
+/sanity/extract.json

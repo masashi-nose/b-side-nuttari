@@ -57,8 +57,19 @@
 | `npm run build` | 本番ビルド |
 | `npm start` | ビルド結果を起動 |
 | `npm run lint` | ESLint |
-| `npm run typecheck` | TypeScript の型チェック（`tsc --noEmit`） |
+| `npm run typecheck` | ルートの型を作り直して `tsc --noEmit` |
 | `npm run format` | Prettier で整形（`*.md` と `design/` は対象外） |
 | `npm run format:check` | 整形漏れの確認 |
+| `npm run typegen` | Sanity のスキーマと GROQ から `sanity/types.ts` を作る。スキーマかクエリを変えたら実行する |
+| `npm run seed:spots` | `data/spots.json` の46件を Sanity に登録（何度実行してもよい） |
 
-Sanity 用の `typegen` / `seed` は Step 2 で追記する。
+## ファイルの置き場所
+
+- `app/(site)/` … サイトのページ。ヘッダー・フッター付き
+- `app/studio/` … 埋め込みの Sanity Studio（`/studio`）。サイトの枠組みは付けない
+- `components/` … 共通部品
+- `lib/` … ナビ定義、区分・ジャンルの表示名
+- `sanity/` … スキーマ・クライアント・生成した型（`sanity/types.ts` は手で編集しない）
+- `scripts/` … 一括登録などの使い捨てスクリプト
+
+環境変数は `.env.local`（`.env.local.example` をコピーして使う）。
