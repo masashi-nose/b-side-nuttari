@@ -1,26 +1,57 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* デザイントークン（docs/design-system.md） */
+@theme {
+  --color-indigo: #22388f;
+  --color-miso: #d9782d;
+  --color-cream: #f7f3ea;
+  --color-cream-muted: #cfc9bc;
+  --color-ink: #1b1b1b;
+  --color-sand: #e9e2d2;
+  --color-sand-dark: #d9d2c2;
+  --color-muted: #5a5448;
+  --color-placeholder: #7a7366;
+  --color-rule: #d8d1c2;
+  --color-open: #1f8a4c;
+
+  --font-display: var(--font-dela), sans-serif;
+  --font-sans: var(--font-zen), sans-serif;
+  --font-mono: var(--font-dm-mono), monospace;
+
+  --shadow-hard-sm: 4px 4px 0 var(--color-ink);
+  --shadow-hard: 6px 6px 0 var(--color-ink);
+  --shadow-hard-lg: 8px 8px 0 var(--color-ink);
+  /* カードのホバー時（translate(-3px,-3px) と組み合わせる） */
+  --shadow-hard-hover: 9px 9px 0 var(--color-ink);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@layer base {
+  body {
+    background-color: var(--color-cream);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  /* フォーカスリングは藍 3px */
+  :focus-visible {
+    outline: 3px solid var(--color-indigo);
+    outline-offset: 2px;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: var(--color-placeholder);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* 左右余白：スマホ 20px、PC 80px。1440px で中央寄せ */
+@utility page-gutter {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 1440px;
+  padding-inline: 1.25rem;
+
+  @variant lg {
+    padding-inline: 5rem;
+  }
 }

@@ -9,10 +9,12 @@
 | indigo | #22388F | メイン（蛇の目の藍） | cream（9.3） |
 | miso | #D9782D | 差し色（味噌の橙） | 大きい文字は ink（5.5）／小さいラベルは white（3.2、デザイン優先で採用） |
 | cream | #F7F3EA | 背景（生成り） | ink |
+| cream-muted | #CFC9BC | フッターの注記（墨地の上） | — |
 | ink | #1B1B1B | 文字・線（墨） | cream |
 | sand | #E9E2D2 | 写真の仮置き・地図 | — |
 | sand-dark | #D9D2C2 | 写真の仮置き（濃） | — |
 | muted | #5A5448 | 仮置きの文字 | — |
+| placeholder | #7A7366 | 入力欄のプレースホルダ | — |
 | rule | #D8D1C2 | 表の区切り線 | — |
 | open | #1F8A4C | 営業中の丸 | — |
 
