@@ -1,10 +1,12 @@
-import createImageUrlBuilder from "@sanity/image-url";
-import type { Image } from "sanity";
+import { createImageUrlBuilder } from "@sanity/image-url";
 import { dataset, projectId } from "../env";
 
 const builder = createImageUrlBuilder({ projectId, dataset });
 
-/** Sanity の画像CDNのURLを作る。next/image の src に渡す */
-export function urlForImage(source: Image) {
-  return builder.image(source).auto("format").fit("max");
+/**
+ * Sanity の画像CDNのURLを作る。GROQ で取った asset._id を渡す。
+ * next/image の src に入れる。
+ */
+export function urlForImage(assetId: string) {
+  return builder.image(assetId).auto("format").fit("max");
 }

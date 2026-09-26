@@ -24,7 +24,7 @@ export type SpotReference = {
 
 export type SpotCard = {
   _type: "spotCard";
-  spot: SpotReference;
+  spot?: SpotReference;
 };
 
 export type Seo = {
@@ -84,13 +84,13 @@ export type RichText = Array<{
 
 export type PullQuote = {
   _type: "pullQuote";
-  text: string;
+  text?: string;
   source?: string;
 };
 
 export type Link = {
   _type: "link";
-  href: string;
+  href?: string;
 };
 
 export type ArticleReference = {
@@ -102,11 +102,11 @@ export type ArticleReference = {
 
 export type HeroSlide = {
   _type: "heroSlide";
-  tag: string;
-  kicker: string;
-  title: string;
-  ctaLabel: string;
-  image: AltImage;
+  tag?: string;
+  kicker?: string;
+  title?: string;
+  ctaLabel?: string;
+  image?: AltImage;
   reference?: ArticleReference | SpotReference;
   url?: string;
 };
@@ -124,7 +124,7 @@ export type CaptionedImage = {
   media?: unknown;
   hotspot?: SanityImageHotspot;
   crop?: SanityImageCrop;
-  alt: string;
+  alt?: string;
   caption?: string;
 };
 
@@ -134,7 +134,7 @@ export type AltImage = {
   media?: unknown;
   hotspot?: SanityImageHotspot;
   crop?: SanityImageCrop;
-  alt: string;
+  alt?: string;
 };
 
 export type SiteSettings = {
@@ -143,8 +143,8 @@ export type SiteSettings = {
   _createdAt: string;
   _updatedAt: string;
   _rev: string;
-  tagline: string;
-  description: string;
+  tagline?: string;
+  description?: string;
   heroSlides?: Array<
     {
       _key: string;
@@ -171,15 +171,15 @@ export type Page = {
   _createdAt: string;
   _updatedAt: string;
   _rev: string;
-  title: string;
-  slug: Slug;
-  body: RichText;
+  title?: string;
+  slug?: Slug;
+  body?: RichText;
   seo?: Seo;
 };
 
 export type Slug = {
   _type: "slug";
-  current: string;
+  current?: string;
   source?: string;
 };
 
@@ -189,14 +189,14 @@ export type Article = {
   _createdAt: string;
   _updatedAt: string;
   _rev: string;
-  title: string;
-  slug: Slug;
-  category: "guide" | "interview" | "history" | "course" | "report";
-  excerpt: string;
-  mainImage: AltImage;
-  publishedAt: string;
+  title?: string;
+  slug?: Slug;
+  category?: "guide" | "interview" | "history" | "course" | "report";
+  excerpt?: string;
+  mainImage?: AltImage;
+  publishedAt?: string;
   updatedAt?: string;
-  body: ArticleBody;
+  body?: ArticleBody;
   relatedSpots?: Array<
     {
       _key: string;
@@ -207,18 +207,18 @@ export type Article = {
 
 export type SanityImageCrop = {
   _type: "sanity.imageCrop";
-  top: number;
-  bottom: number;
-  left: number;
-  right: number;
+  top?: number;
+  bottom?: number;
+  left?: number;
+  right?: number;
 };
 
 export type SanityImageHotspot = {
   _type: "sanity.imageHotspot";
-  x: number;
-  y: number;
-  height: number;
-  width: number;
+  x?: number;
+  y?: number;
+  height?: number;
+  width?: number;
 };
 
 export type Spot = {
@@ -227,14 +227,14 @@ export type Spot = {
   _createdAt: string;
   _updatedAt: string;
   _rev: string;
-  name: string;
-  slug: Slug;
-  category: "terrace" | "kura" | "spot" | "local";
-  genres: Array<string>;
-  status: "open" | "paused" | "closed";
-  summary: string;
-  location: Geopoint;
-  lastVerifiedAt: string;
+  name?: string;
+  slug?: Slug;
+  category?: "terrace" | "kura" | "spot" | "local";
+  genres?: Array<string>;
+  status?: "open" | "paused" | "closed";
+  summary?: string;
+  location?: Geopoint;
+  lastVerifiedAt?: string;
   address?: string;
   hours?: string;
   holidays?: string;
@@ -279,9 +279,9 @@ export type SanityImagePalette = {
 
 export type SanityImageDimensions = {
   _type: "sanity.imageDimensions";
-  height: number;
-  width: number;
-  aspectRatio: number;
+  height?: number;
+  width?: number;
+  aspectRatio?: number;
 };
 
 export type SanityImageMetadata = {
@@ -307,14 +307,14 @@ export type SanityFileAsset = {
   title?: string;
   description?: string;
   altText?: string;
-  sha1hash: string;
-  extension: string;
-  mimeType: string;
-  size: number;
-  assetId: string;
+  sha1hash?: string;
+  extension?: string;
+  mimeType?: string;
+  size?: number;
+  assetId?: string;
   uploadId?: string;
-  path: string;
-  url: string;
+  path?: string;
+  url?: string;
   source?: SanityAssetSourceData;
 };
 
@@ -336,14 +336,14 @@ export type SanityImageAsset = {
   title?: string;
   description?: string;
   altText?: string;
-  sha1hash: string;
-  extension: string;
-  mimeType: string;
-  size: number;
-  assetId: string;
+  sha1hash?: string;
+  extension?: string;
+  mimeType?: string;
+  size?: number;
+  assetId?: string;
   uploadId?: string;
-  path: string;
-  url: string;
+  path?: string;
+  url?: string;
   metadata?: SanityImageMetadata;
   source?: SanityAssetSourceData;
 };
@@ -376,3 +376,118 @@ export type AllSanitySchemaTypes =
   | SanityFileAsset
   | SanityAssetSourceData
   | SanityImageAsset;
+
+// Source: sanity/lib/queries.ts
+// Variable: spotSlugsQuery
+// Query: *[_type == "spot" && defined(slug.current)]{ "slug": slug.current }
+export type SpotSlugsQueryResult = Array<{
+  slug: string | null;
+}>;
+
+// Source: sanity/lib/queries.ts
+// Variable: spotBySlugQuery
+// Query: *[_type == "spot" && slug.current == $slug][0]{    _id,    name,    "slug": slug.current,    category,    genres,    status,    summary,    address,    hours,    holidays,    website,    instagram,    lastVerifiedAt,    location,    body,    mainImage{      alt,      asset->{        _id,        url,        "lqip": metadata.lqip,        "aspectRatio": metadata.dimensions.aspectRatio      }    },    gallery[]{      alt,      asset->{        _id,        url,        "lqip": metadata.lqip,        "aspectRatio": metadata.dimensions.aspectRatio      }    },    "articles": *[_type == "article" && references(^._id)]      | order(publishedAt desc)[0...4]{        title,        "slug": slug.current,        category,        mainImage{          alt,          asset->{            _id,            url,            "lqip": metadata.lqip,            "aspectRatio": metadata.dimensions.aspectRatio          }        }      },    seo  }
+export type SpotBySlugQueryResult = {
+  _id: string;
+  name: string | null;
+  slug: string | null;
+  category: "kura" | "local" | "spot" | "terrace" | null;
+  genres: Array<string> | null;
+  status: "closed" | "open" | "paused" | null;
+  summary: string | null;
+  address: string | null;
+  hours: string | null;
+  holidays: string | null;
+  website: string | null;
+  instagram: string | null;
+  lastVerifiedAt: string | null;
+  location: Geopoint | null;
+  body: RichText | null;
+  mainImage: {
+    alt: string | null;
+    asset: {
+      _id: string;
+      url: string | null;
+      lqip: string | null;
+      aspectRatio: number | null;
+    } | null;
+  } | null;
+  gallery: Array<{
+    alt: string | null;
+    asset: {
+      _id: string;
+      url: string | null;
+      lqip: string | null;
+      aspectRatio: number | null;
+    } | null;
+  }> | null;
+  articles: Array<{
+    title: string | null;
+    slug: string | null;
+    category: "course" | "guide" | "history" | "interview" | "report" | null;
+    mainImage: {
+      alt: string | null;
+      asset: {
+        _id: string;
+        url: string | null;
+        lqip: string | null;
+        aspectRatio: number | null;
+      } | null;
+    } | null;
+  }>;
+  seo: Seo | null;
+} | null;
+
+// Source: sanity/lib/queries.ts
+// Variable: nearbySpotsQuery
+// Query: *[_type == "spot"    && _id != $id    && status != "closed"    && defined(location)    && defined(slug.current)]    | order(geo::distance(location, $location) asc)[0...3]{      name,      "slug": slug.current,      category,      summary,      mainImage{        alt,        asset->{          _id,          url,          "lqip": metadata.lqip,          "aspectRatio": metadata.dimensions.aspectRatio        }      }    }
+export type NearbySpotsQueryResult = Array<{
+  name: string | null;
+  slug: string | null;
+  category: "kura" | "local" | "spot" | "terrace" | null;
+  summary: string | null;
+  mainImage: {
+    alt: string | null;
+    asset: {
+      _id: string;
+      url: string | null;
+      lqip: string | null;
+      aspectRatio: number | null;
+    } | null;
+  } | null;
+}>;
+
+// Source: sanity/lib/queries.ts
+// Variable: spotListQuery
+// Query: *[_type == "spot" && status != "closed" && defined(slug.current)]    | order(name asc){      name,      "slug": slug.current,      category,      genres,      status,      summary,      mainImage{        alt,        asset->{          _id,          url,          "lqip": metadata.lqip,          "aspectRatio": metadata.dimensions.aspectRatio        }      }    }
+export type SpotListQueryResult = Array<{
+  name: string | null;
+  slug: string | null;
+  category: "kura" | "local" | "spot" | "terrace" | null;
+  genres: Array<string> | null;
+  status: "closed" | "open" | "paused" | null;
+  summary: string | null;
+  mainImage: {
+    alt: string | null;
+    asset: {
+      _id: string;
+      url: string | null;
+      lqip: string | null;
+      aspectRatio: number | null;
+    } | null;
+  } | null;
+}>;
+
+// Query TypeMap
+declare global {
+  interface SanityQueries {
+    '\n  *[_type == "spot" && defined(slug.current)]{ "slug": slug.current }\n': SpotSlugsQueryResult;
+    '\n  *[_type == "spot" && slug.current == $slug][0]{\n    _id,\n    name,\n    "slug": slug.current,\n    category,\n    genres,\n    status,\n    summary,\n    address,\n    hours,\n    holidays,\n    website,\n    instagram,\n    lastVerifiedAt,\n    location,\n    body,\n    mainImage{\n      alt,\n      asset->{\n        _id,\n        url,\n        "lqip": metadata.lqip,\n        "aspectRatio": metadata.dimensions.aspectRatio\n      }\n    },\n    gallery[]{\n      alt,\n      asset->{\n        _id,\n        url,\n        "lqip": metadata.lqip,\n        "aspectRatio": metadata.dimensions.aspectRatio\n      }\n    },\n    "articles": *[_type == "article" && references(^._id)]\n      | order(publishedAt desc)[0...4]{\n        title,\n        "slug": slug.current,\n        category,\n        mainImage{\n          alt,\n          asset->{\n            _id,\n            url,\n            "lqip": metadata.lqip,\n            "aspectRatio": metadata.dimensions.aspectRatio\n          }\n        }\n      },\n    seo\n  }\n': SpotBySlugQueryResult;
+    '\n  *[_type == "spot"\n    && _id != $id\n    && status != "closed"\n    && defined(location)\n    && defined(slug.current)]\n    | order(geo::distance(location, $location) asc)[0...3]{\n      name,\n      "slug": slug.current,\n      category,\n      summary,\n      mainImage{\n        alt,\n        asset->{\n          _id,\n          url,\n          "lqip": metadata.lqip,\n          "aspectRatio": metadata.dimensions.aspectRatio\n        }\n      }\n    }\n': NearbySpotsQueryResult;
+    '\n  *[_type == "spot" && status != "closed" && defined(slug.current)]\n    | order(name asc){\n      name,\n      "slug": slug.current,\n      category,\n      genres,\n      status,\n      summary,\n      mainImage{\n        alt,\n        asset->{\n          _id,\n          url,\n          "lqip": metadata.lqip,\n          "aspectRatio": metadata.dimensions.aspectRatio\n        }\n      }\n    }\n': SpotListQueryResult;
+  }
+}
+// Lets @sanity/client releases that predate the global registry read it too
+declare module "@sanity/client" {
+  interface SanityQueries extends globalThis.SanityQueries {}
+}

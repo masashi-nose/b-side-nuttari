@@ -10,7 +10,7 @@
     "typecheck": "next typegen && tsc --noEmit",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "typegen": "sanity schema extract --path sanity/extract.json --enforce-required-fields --force && sanity typegen generate",
+    "typegen": "sanity schema extract --path sanity/extract.json --force && sanity typegen generate",
     "seed:spots": "node --env-file=.env.local scripts/seed-spots.mts"
   },
   "dependencies": {
